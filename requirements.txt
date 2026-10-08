@@ -1,0 +1,2 @@
+# Only required to regenerate chart PNGs; extraction/generation use the standard library.
+matplotlib>=3.8,<4

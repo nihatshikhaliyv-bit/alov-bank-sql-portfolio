@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "validation": "Independent streaming replay of the serialized SQL payload",
+  "transactions": 14585400,
+  "customer_months": 360000,
+  "monthly_min": 1,
+  "monthly_max": 80,
+  "closing_balance_mismatches": 0,
+  "fee_total_mismatches": 0,
+  "negative_running_balances": 0,
+  "id_gaps_or_duplicates": 0,
+  "owner_branch_mismatches": 0,
+  "payload_sha256": "678880514d8ed94f9a5a1802fb995df4f4b802288746d65dcfad30a97f990534",
+  "payload_bytes": 1251262474,
+  "elapsed_seconds": 58.53,
+  "mysql_restore_tested": false
+}

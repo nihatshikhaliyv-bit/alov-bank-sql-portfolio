@@ -1,0 +1,1510 @@
+{
+  "source_sha256": "678880514d8ed94f9a5a1802fb995df4f4b802288746d65dcfad30a97f990534",
+  "snapshot_exported_at": "Baseline exported 2026-10-04 12:30:23; expanded history generated on request for all of 2025",
+  "monetary_units": "AZN except fields explicitly ending _cents; rates/ratios labeled separately",
+  "counts": {
+    "accounts": 45449,
+    "bank_account_controls": 45449,
+    "bank_control_audit": 0,
+    "bank_entry_links": 0,
+    "bank_interest_accruals": 0,
+    "bank_job_log": 0,
+    "bank_loan_installments": 0,
+    "bank_loan_payments": 0,
+    "bank_loan_schedules": 0,
+    "bank_operations": 0,
+    "bank_upgrade_version": 1,
+    "branch_financials": 25,
+    "branches": 25,
+    "customers": 30000,
+    "loans": 16000,
+    "transaction_audit": 0,
+    "transactions": 14585400
+  },
+  "financial_totals": [
+    {
+      "reporting_year": 2025,
+      "branches": 25,
+      "interest_income": 88063450.45,
+      "fee_income": 408591.38,
+      "other_income": 1931582.5,
+      "total_revenue": 90403624.33,
+      "interest_expense": 19568811.23,
+      "operating_expense": 35059824.17,
+      "total_expenses": 54628635.4,
+      "net_profit": 35774988.93,
+      "reported_loan_amount": 885501530.84,
+      "reported_deposit_amount": 1139873847.61
+    }
+  ],
+  "accounts": [
+    {
+      "account_type": "Savings",
+      "accounts": 12488,
+      "balance": 603324104.29,
+      "avg_balance": 48312.30815903267,
+      "balance_weighted_rate_percent": 3.243498986186014
+    },
+    {
+      "account_type": "Salary",
+      "accounts": 16420,
+      "balance": 266937304.51,
+      "avg_balance": 16256.839495127893,
+      "balance_weighted_rate_percent": 0.0
+    },
+    {
+      "account_type": "Current",
+      "accounts": 11685,
+      "balance": 190492237.24,
+      "avg_balance": 16302.288167736413,
+      "balance_weighted_rate_percent": 0.0
+    },
+    {
+      "account_type": "Business",
+      "accounts": 4856,
+      "balance": 79120201.57,
+      "avg_balance": 16293.286978995056,
+      "balance_weighted_rate_percent": 0.0
+    }
+  ],
+  "account_status": [
+    {
+      "account_status": "Active",
+      "activity_status": "Active",
+      "accounts": 44510,
+      "balance": 1116248024.36
+    },
+    {
+      "account_status": "Dormant",
+      "activity_status": "Active",
+      "accounts": 939,
+      "balance": 23625823.25
+    }
+  ],
+  "loans": [
+    {
+      "loan_type": "Mortgage",
+      "loans": 6229,
+      "original_amount": 1029896342.93,
+      "outstanding": 651018765.39,
+      "overdue_outstanding": 28344076.66,
+      "overdue_loans": 244,
+      "outstanding_weighted_rate_percent": 8.51111858875967
+    },
+    {
+      "loan_type": "Business",
+      "loans": 652,
+      "original_amount": 132522577.07,
+      "outstanding": 83616824.26,
+      "overdue_outstanding": 4662215.77,
+      "overdue_loans": 33,
+      "outstanding_weighted_rate_percent": 15.032733926208309
+    },
+    {
+      "loan_type": "Auto",
+      "loans": 2853,
+      "original_amount": 114841639.59,
+      "outstanding": 73848869.03,
+      "overdue_outstanding": 3241831.12,
+      "overdue_loans": 120,
+      "outstanding_weighted_rate_percent": 13.459928806653792
+    },
+    {
+      "loan_type": "Personal",
+      "loans": 5625,
+      "original_amount": 112483278.15,
+      "outstanding": 72117480.68,
+      "overdue_outstanding": 2944034.55,
+      "overdue_loans": 206,
+      "outstanding_weighted_rate_percent": 19.043885626310814
+    },
+    {
+      "loan_type": "Education",
+      "loans": 641,
+      "original_amount": 7742720.55,
+      "outstanding": 4899591.48,
+      "overdue_outstanding": 292082.2,
+      "overdue_loans": 33,
+      "outstanding_weighted_rate_percent": 10.94342222886713
+    }
+  ],
+  "loan_status": [
+    {
+      "loan_status": "Active",
+      "loans": 13992,
+      "original_amount": 1219146875.89,
+      "outstanding": 846017290.54
+    },
+    {
+      "loan_status": "Overdue",
+      "loans": 636,
+      "original_amount": 56987446.63,
+      "outstanding": 39484240.3
+    },
+    {
+      "loan_status": "Paid",
+      "loans": 1372,
+      "original_amount": 121352235.77,
+      "outstanding": 0.0
+    }
+  ],
+  "risk_mix": [
+    {
+      "risk_rating": "High",
+      "customers": 2088,
+      "loans": 1143,
+      "outstanding": 60820071.25,
+      "overdue_outstanding": 3275277.13
+    },
+    {
+      "risk_rating": "Low",
+      "customers": 19573,
+      "loans": 10449,
+      "outstanding": 575202615.97,
+      "overdue_outstanding": 24875501.94
+    },
+    {
+      "risk_rating": "Medium",
+      "customers": 8339,
+      "loans": 4408,
+      "outstanding": 249478843.62,
+      "overdue_outstanding": 11333461.23
+    }
+  ],
+  "customer_employment": [
+    {
+      "employment_status": "Employed",
+      "customers": 16420,
+      "avg_income": 48399.079788672345
+    },
+    {
+      "employment_status": "Retired",
+      "customers": 8146,
+      "avg_income": 9018.219502823471
+    },
+    {
+      "employment_status": "Self-employed",
+      "customers": 4856,
+      "avg_income": 48320.98240733114
+    },
+    {
+      "employment_status": "Unemployed",
+      "customers": 465,
+      "avg_income": 9061.253827956989
+    },
+    {
+      "employment_status": "Student",
+      "customers": 113,
+      "avg_income": 9261.083185840707
+    }
+  ],
+  "customer_cities": [
+    {
+      "city": "Baku",
+      "customers": 17142
+    },
+    {
+      "city": "Ganja",
+      "customers": 1718
+    },
+    {
+      "city": "Sumgayit",
+      "customers": 1712
+    },
+    {
+      "city": "Nakhchivan",
+      "customers": 922
+    },
+    {
+      "city": "Gabala",
+      "customers": 897
+    },
+    {
+      "city": "Shaki",
+      "customers": 879
+    },
+    {
+      "city": "Mingachevir",
+      "customers": 875
+    },
+    {
+      "city": "Aghjabadi",
+      "customers": 871
+    },
+    {
+      "city": "Lankaran",
+      "customers": 849
+    },
+    {
+      "city": "Barda",
+      "customers": 833
+    },
+    {
+      "city": "Quba",
+      "customers": 832
+    },
+    {
+      "city": "Shirvan",
+      "customers": 830
+    },
+    {
+      "city": "Masalli",
+      "customers": 825
+    },
+    {
+      "city": "Khachmaz",
+      "customers": 815
+    }
+  ],
+  "branches": [
+    {
+      "branch_id": 19,
+      "branch_name": "Baku North",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 22,
+      "reporting_year": 2025,
+      "total_revenue": 5717428.74,
+      "net_profit": 3024752.82,
+      "operating_expense": 1403439.92,
+      "reported_loan_amount": 55235083.65,
+      "reported_deposit_amount": 74286185.63
+    },
+    {
+      "branch_id": 17,
+      "branch_name": "Baku Premium",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 27,
+      "reporting_year": 2025,
+      "total_revenue": 5633435.87,
+      "net_profit": 2800214.3,
+      "operating_expense": 1617410.95,
+      "reported_loan_amount": 56206090.88,
+      "reported_deposit_amount": 71970024.82
+    },
+    {
+      "branch_id": 20,
+      "branch_name": "Baku South",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 18,
+      "reporting_year": 2025,
+      "total_revenue": 4919698.48,
+      "net_profit": 2744907.6,
+      "operating_expense": 1199378.85,
+      "reported_loan_amount": 48303369.88,
+      "reported_deposit_amount": 55499418.77
+    },
+    {
+      "branch_id": 3,
+      "branch_name": "Narimanov",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 20,
+      "reporting_year": 2025,
+      "total_revenue": 5179083.06,
+      "net_profit": 2659966.85,
+      "operating_expense": 1297272.01,
+      "reported_loan_amount": 50991901.09,
+      "reported_deposit_amount": 68487331.82
+    },
+    {
+      "branch_id": 1,
+      "branch_name": "Central Baku",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 20,
+      "reporting_year": 2025,
+      "total_revenue": 4956570.18,
+      "net_profit": 2626156.71,
+      "operating_expense": 1286346.68,
+      "reported_loan_amount": 48937735.04,
+      "reported_deposit_amount": 61132490.67
+    },
+    {
+      "branch_id": 4,
+      "branch_name": "Yasamal",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 26,
+      "reporting_year": 2025,
+      "total_revenue": 5114504.06,
+      "net_profit": 2542641.52,
+      "operating_expense": 1544692.34,
+      "reported_loan_amount": 50169467.72,
+      "reported_deposit_amount": 61111672.51
+    },
+    {
+      "branch_id": 2,
+      "branch_name": "Nizami",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 28,
+      "reporting_year": 2025,
+      "total_revenue": 5149194.65,
+      "net_profit": 2469449.57,
+      "operating_expense": 1627169.18,
+      "reported_loan_amount": 49864836.47,
+      "reported_deposit_amount": 60027633.59
+    },
+    {
+      "branch_id": 5,
+      "branch_name": "Khatai",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 23,
+      "reporting_year": 2025,
+      "total_revenue": 4972840.27,
+      "net_profit": 2335790.35,
+      "operating_expense": 1419571.37,
+      "reported_loan_amount": 50362274.04,
+      "reported_deposit_amount": 70955864.01
+    },
+    {
+      "branch_id": 16,
+      "branch_name": "Baku Business",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 29,
+      "reporting_year": 2025,
+      "total_revenue": 5089731.51,
+      "net_profit": 2303269.68,
+      "operating_expense": 1670570.98,
+      "reported_loan_amount": 50259095.57,
+      "reported_deposit_amount": 65485727.21
+    },
+    {
+      "branch_id": 18,
+      "branch_name": "Baku West",
+      "city": "Baku",
+      "region": "Absheron",
+      "employee_count": 30,
+      "reporting_year": 2025,
+      "total_revenue": 5149627.45,
+      "net_profit": 2232784.9,
+      "operating_expense": 1714978.54,
+      "reported_loan_amount": 50455008.0,
+      "reported_deposit_amount": 69806579.65
+    },
+    {
+      "branch_id": 13,
+      "branch_name": "Quba",
+      "city": "Quba",
+      "region": "Guba-Khachmaz",
+      "employee_count": 22,
+      "reporting_year": 2025,
+      "total_revenue": 2757351.37,
+      "net_profit": 965513.88,
+      "operating_expense": 1249665.95,
+      "reported_loan_amount": 27016689.63,
+      "reported_deposit_amount": 31701028.23
+    },
+    {
+      "branch_id": 6,
+      "branch_name": "Ganja Central",
+      "city": "Ganja",
+      "region": "Ganja-Dashkasan",
+      "employee_count": 24,
+      "reporting_year": 2025,
+      "total_revenue": 2892924.03,
+      "net_profit": 939478.03,
+      "operating_expense": 1335897.2,
+      "reported_loan_amount": 27289540.27,
+      "reported_deposit_amount": 35467576.37
+    },
+    {
+      "branch_id": 24,
+      "branch_name": "Masalli",
+      "city": "Masalli",
+      "region": "Lankaran-Astara",
+      "employee_count": 21,
+      "reporting_year": 2025,
+      "total_revenue": 2450171.58,
+      "net_profit": 745889.51,
+      "operating_expense": 1192298.12,
+      "reported_loan_amount": 23968623.3,
+      "reported_deposit_amount": 30282825.31
+    },
+    {
+      "branch_id": 11,
+      "branch_name": "Shaki",
+      "city": "Shaki",
+      "region": "Sheki-Zagatala",
+      "employee_count": 25,
+      "reporting_year": 2025,
+      "total_revenue": 2712029.13,
+      "net_profit": 738650.41,
+      "operating_expense": 1372577.31,
+      "reported_loan_amount": 26268062.52,
+      "reported_deposit_amount": 33814329.18
+    },
+    {
+      "branch_id": 23,
+      "branch_name": "Gabala",
+      "city": "Gabala",
+      "region": "Sheki-Zagatala",
+      "employee_count": 29,
+      "reporting_year": 2025,
+      "total_revenue": 2908209.27,
+      "net_profit": 734612.69,
+      "operating_expense": 1559027.05,
+      "reported_loan_amount": 29930809.62,
+      "reported_deposit_amount": 37116457.43
+    },
+    {
+      "branch_id": 12,
+      "branch_name": "Lankaran",
+      "city": "Lankaran",
+      "region": "Lankaran-Astara",
+      "employee_count": 23,
+      "reporting_year": 2025,
+      "total_revenue": 2618607.49,
+      "net_profit": 723253.69,
+      "operating_expense": 1284227.52,
+      "reported_loan_amount": 25467803.85,
+      "reported_deposit_amount": 35813481.0
+    },
+    {
+      "branch_id": 15,
+      "branch_name": "Nakhchivan",
+      "city": "Nakhchivan",
+      "region": "Nakhchivan",
+      "employee_count": 27,
+      "reporting_year": 2025,
+      "total_revenue": 2716204.19,
+      "net_profit": 722676.91,
+      "operating_expense": 1451553.19,
+      "reported_loan_amount": 25120438.01,
+      "reported_deposit_amount": 30338301.64
+    },
+    {
+      "branch_id": 10,
+      "branch_name": "Mingachevir",
+      "city": "Mingachevir",
+      "region": "Central Aran",
+      "employee_count": 28,
+      "reporting_year": 2025,
+      "total_revenue": 2680808.8,
+      "net_profit": 634642.34,
+      "operating_expense": 1501026.57,
+      "reported_loan_amount": 26798713.06,
+      "reported_deposit_amount": 32366716.58
+    },
+    {
+      "branch_id": 8,
+      "branch_name": "Sumgayit Central",
+      "city": "Sumgayit",
+      "region": "Absheron",
+      "employee_count": 23,
+      "reporting_year": 2025,
+      "total_revenue": 2462974.23,
+      "net_profit": 629201.22,
+      "operating_expense": 1274619.95,
+      "reported_loan_amount": 23430690.63,
+      "reported_deposit_amount": 33366172.44
+    },
+    {
+      "branch_id": 9,
+      "branch_name": "Sumgayit Industrial",
+      "city": "Sumgayit",
+      "region": "Absheron",
+      "employee_count": 19,
+      "reporting_year": 2025,
+      "total_revenue": 2173288.86,
+      "net_profit": 610751.57,
+      "operating_expense": 1091728.11,
+      "reported_loan_amount": 20615521.69,
+      "reported_deposit_amount": 27908603.03
+    },
+    {
+      "branch_id": 14,
+      "branch_name": "Shirvan",
+      "city": "Shirvan",
+      "region": "Shirvan-Salyan",
+      "employee_count": 25,
+      "reporting_year": 2025,
+      "total_revenue": 2406429.89,
+      "net_profit": 588973.26,
+      "operating_expense": 1357593.14,
+      "reported_loan_amount": 23410628.94,
+      "reported_deposit_amount": 27721166.48
+    },
+    {
+      "branch_id": 25,
+      "branch_name": "Khachmaz",
+      "city": "Khachmaz",
+      "region": "Guba-Khachmaz",
+      "employee_count": 22,
+      "reporting_year": 2025,
+      "total_revenue": 2298294.58,
+      "net_profit": 588870.78,
+      "operating_expense": 1227047.45,
+      "reported_loan_amount": 22494689.44,
+      "reported_deposit_amount": 27844254.97
+    },
+    {
+      "branch_id": 7,
+      "branch_name": "Ganja East",
+      "city": "Ganja",
+      "region": "Ganja-Dashkasan",
+      "employee_count": 29,
+      "reporting_year": 2025,
+      "total_revenue": 2596363.02,
+      "net_profit": 536940.08,
+      "operating_expense": 1535460.42,
+      "reported_loan_amount": 25173283.16,
+      "reported_deposit_amount": 29864530.22
+    },
+    {
+      "branch_id": 22,
+      "branch_name": "Barda",
+      "city": "Barda",
+      "region": "Central Aran",
+      "employee_count": 25,
+      "reporting_year": 2025,
+      "total_revenue": 2436875.65,
+      "net_profit": 498805.21,
+      "operating_expense": 1360128.87,
+      "reported_loan_amount": 23900774.69,
+      "reported_deposit_amount": 34086642.59
+    },
+    {
+      "branch_id": 21,
+      "branch_name": "Aghjabadi",
+      "city": "Aghjabadi",
+      "region": "Central Aran",
+      "employee_count": 28,
+      "reporting_year": 2025,
+      "total_revenue": 2410977.97,
+      "net_profit": 376795.05,
+      "operating_expense": 1486142.5,
+      "reported_loan_amount": 23830399.69,
+      "reported_deposit_amount": 33418833.46
+    }
+  ],
+  "regions": [
+    {
+      "region": "Absheron",
+      "branches": 12,
+      "total_revenue": 56518377.36,
+      "net_profit": 26979887.09,
+      "reported_loan_amount": 554831074.66,
+      "reported_deposit_amount": 720037704.15
+    },
+    {
+      "region": "Guba-Khachmaz",
+      "branches": 2,
+      "total_revenue": 5055645.95,
+      "net_profit": 1554384.66,
+      "reported_loan_amount": 49511379.07,
+      "reported_deposit_amount": 59545283.2
+    },
+    {
+      "region": "Central Aran",
+      "branches": 3,
+      "total_revenue": 7528662.42,
+      "net_profit": 1510242.6,
+      "reported_loan_amount": 74529887.44,
+      "reported_deposit_amount": 99872192.63
+    },
+    {
+      "region": "Ganja-Dashkasan",
+      "branches": 2,
+      "total_revenue": 5489287.05,
+      "net_profit": 1476418.11,
+      "reported_loan_amount": 52462823.43,
+      "reported_deposit_amount": 65332106.59
+    },
+    {
+      "region": "Sheki-Zagatala",
+      "branches": 2,
+      "total_revenue": 5620238.4,
+      "net_profit": 1473263.1,
+      "reported_loan_amount": 56198872.14,
+      "reported_deposit_amount": 70930786.61
+    },
+    {
+      "region": "Lankaran-Astara",
+      "branches": 2,
+      "total_revenue": 5068779.07,
+      "net_profit": 1469143.2,
+      "reported_loan_amount": 49436427.15,
+      "reported_deposit_amount": 66096306.31
+    },
+    {
+      "region": "Nakhchivan",
+      "branches": 1,
+      "total_revenue": 2716204.19,
+      "net_profit": 722676.91,
+      "reported_loan_amount": 25120438.01,
+      "reported_deposit_amount": 30338301.64
+    },
+    {
+      "region": "Shirvan-Salyan",
+      "branches": 1,
+      "total_revenue": 2406429.89,
+      "net_profit": 588973.26,
+      "reported_loan_amount": 23410628.94,
+      "reported_deposit_amount": 27721166.48
+    }
+  ],
+  "monthly_transactions": [
+    {
+      "month": "2025-01",
+      "transactions": 1218363,
+      "gross_amount": 109315774.27
+    },
+    {
+      "month": "2025-02",
+      "transactions": 1208308,
+      "gross_amount": 108592402.19
+    },
+    {
+      "month": "2025-03",
+      "transactions": 1216480,
+      "gross_amount": 109094383.89
+    },
+    {
+      "month": "2025-04",
+      "transactions": 1212227,
+      "gross_amount": 108671308.84
+    },
+    {
+      "month": "2025-05",
+      "transactions": 1216851,
+      "gross_amount": 109130114.13
+    },
+    {
+      "month": "2025-06",
+      "transactions": 1220698,
+      "gross_amount": 109347929.8
+    },
+    {
+      "month": "2025-07",
+      "transactions": 1216846,
+      "gross_amount": 109166183.57
+    },
+    {
+      "month": "2025-08",
+      "transactions": 1214393,
+      "gross_amount": 108716608.22
+    },
+    {
+      "month": "2025-09",
+      "transactions": 1213731,
+      "gross_amount": 108662777.15
+    },
+    {
+      "month": "2025-10",
+      "transactions": 1212896,
+      "gross_amount": 108632862.7
+    },
+    {
+      "month": "2025-11",
+      "transactions": 1216220,
+      "gross_amount": 109677291.05
+    },
+    {
+      "month": "2025-12",
+      "transactions": 1218387,
+      "gross_amount": 187961204.08
+    }
+  ],
+  "monthly_types": [
+    {
+      "month": "2025-01",
+      "transaction_type": "Deposit",
+      "transactions": 607737,
+      "gross_amount": 54692752.04
+    },
+    {
+      "month": "2025-01",
+      "transaction_type": "Fee",
+      "transactions": 3772,
+      "gross_amount": 33928.32
+    },
+    {
+      "month": "2025-01",
+      "transaction_type": "Withdrawal",
+      "transactions": 606854,
+      "gross_amount": 54589093.91
+    },
+    {
+      "month": "2025-02",
+      "transaction_type": "Deposit",
+      "transactions": 601769,
+      "gross_amount": 54295418.29
+    },
+    {
+      "month": "2025-02",
+      "transaction_type": "Fee",
+      "transactions": 3831,
+      "gross_amount": 34194.93
+    },
+    {
+      "month": "2025-02",
+      "transaction_type": "Withdrawal",
+      "transactions": 602708,
+      "gross_amount": 54262788.97
+    },
+    {
+      "month": "2025-03",
+      "transaction_type": "Deposit",
+      "transactions": 606643,
+      "gross_amount": 54667071.86
+    },
+    {
+      "month": "2025-03",
+      "transaction_type": "Fee",
+      "transactions": 3800,
+      "gross_amount": 33861.37
+    },
+    {
+      "month": "2025-03",
+      "transaction_type": "Withdrawal",
+      "transactions": 606037,
+      "gross_amount": 54393450.66
+    },
+    {
+      "month": "2025-04",
+      "transaction_type": "Deposit",
+      "transactions": 604354,
+      "gross_amount": 54365240.28
+    },
+    {
+      "month": "2025-04",
+      "transaction_type": "Fee",
+      "transactions": 3678,
+      "gross_amount": 33078.66
+    },
+    {
+      "month": "2025-04",
+      "transaction_type": "Withdrawal",
+      "transactions": 604195,
+      "gross_amount": 54272989.9
+    },
+    {
+      "month": "2025-05",
+      "transaction_type": "Deposit",
+      "transactions": 606343,
+      "gross_amount": 54646105.15
+    },
+    {
+      "month": "2025-05",
+      "transaction_type": "Fee",
+      "transactions": 3853,
+      "gross_amount": 34428.79
+    },
+    {
+      "month": "2025-05",
+      "transaction_type": "Withdrawal",
+      "transactions": 606655,
+      "gross_amount": 54449580.19
+    },
+    {
+      "month": "2025-06",
+      "transaction_type": "Deposit",
+      "transactions": 608017,
+      "gross_amount": 54779441.84
+    },
+    {
+      "month": "2025-06",
+      "transaction_type": "Fee",
+      "transactions": 3876,
+      "gross_amount": 34765.88
+    },
+    {
+      "month": "2025-06",
+      "transaction_type": "Withdrawal",
+      "transactions": 608805,
+      "gross_amount": 54533722.08
+    },
+    {
+      "month": "2025-07",
+      "transaction_type": "Deposit",
+      "transactions": 606829,
+      "gross_amount": 54732348.64
+    },
+    {
+      "month": "2025-07",
+      "transaction_type": "Fee",
+      "transactions": 3828,
+      "gross_amount": 34500.49
+    },
+    {
+      "month": "2025-07",
+      "transaction_type": "Withdrawal",
+      "transactions": 606189,
+      "gross_amount": 54399334.44
+    },
+    {
+      "month": "2025-08",
+      "transaction_type": "Deposit",
+      "transactions": 605072,
+      "gross_amount": 54341546.86
+    },
+    {
+      "month": "2025-08",
+      "transaction_type": "Fee",
+      "transactions": 3855,
+      "gross_amount": 34636.25
+    },
+    {
+      "month": "2025-08",
+      "transaction_type": "Withdrawal",
+      "transactions": 605466,
+      "gross_amount": 54340425.11
+    },
+    {
+      "month": "2025-09",
+      "transaction_type": "Deposit",
+      "transactions": 605765,
+      "gross_amount": 54483138.28
+    },
+    {
+      "month": "2025-09",
+      "transaction_type": "Fee",
+      "transactions": 3798,
+      "gross_amount": 34239.47
+    },
+    {
+      "month": "2025-09",
+      "transaction_type": "Withdrawal",
+      "transactions": 604168,
+      "gross_amount": 54145399.4
+    },
+    {
+      "month": "2025-10",
+      "transaction_type": "Deposit",
+      "transactions": 604547,
+      "gross_amount": 54372779.21
+    },
+    {
+      "month": "2025-10",
+      "transaction_type": "Fee",
+      "transactions": 3694,
+      "gross_amount": 33389.22
+    },
+    {
+      "month": "2025-10",
+      "transaction_type": "Withdrawal",
+      "transactions": 604655,
+      "gross_amount": 54226694.27
+    },
+    {
+      "month": "2025-11",
+      "transaction_type": "Deposit",
+      "transactions": 605917,
+      "gross_amount": 55000296.45
+    },
+    {
+      "month": "2025-11",
+      "transaction_type": "Fee",
+      "transactions": 3816,
+      "gross_amount": 34713.09
+    },
+    {
+      "month": "2025-11",
+      "transaction_type": "Withdrawal",
+      "transactions": 606487,
+      "gross_amount": 54642281.51
+    },
+    {
+      "month": "2025-12",
+      "transaction_type": "Deposit",
+      "transactions": 608345,
+      "gross_amount": 96594811.44
+    },
+    {
+      "month": "2025-12",
+      "transaction_type": "Fee",
+      "transactions": 3648,
+      "gross_amount": 32854.91
+    },
+    {
+      "month": "2025-12",
+      "transaction_type": "Withdrawal",
+      "transactions": 606394,
+      "gross_amount": 91333537.73
+    }
+  ],
+  "date_ranges": [
+    {
+      "entity": "transactions",
+      "earliest": "2025-01-01",
+      "latest": "2025-12-31"
+    },
+    {
+      "entity": "loan issue",
+      "earliest": "2021-01-01",
+      "latest": "2024-08-30"
+    },
+    {
+      "entity": "account opening",
+      "earliest": "2010-03-15",
+      "latest": "2024-05-11"
+    },
+    {
+      "entity": "customer registration",
+      "earliest": "2010-03-15",
+      "latest": "2024-01-01"
+    }
+  ],
+  "branch_balance_reconciliation": [
+    {
+      "branch_id": 1,
+      "branch_name": "Central Baku",
+      "reported_deposits": 61132490.67,
+      "account_balance": 61132490.67,
+      "reported_loans": 48937735.04,
+      "original_loans": 78232783.25,
+      "outstanding_loans": 48937735.04
+    },
+    {
+      "branch_id": 2,
+      "branch_name": "Nizami",
+      "reported_deposits": 60027633.59,
+      "account_balance": 60027633.59,
+      "reported_loans": 49864836.47,
+      "original_loans": 77997425.83,
+      "outstanding_loans": 49864836.47
+    },
+    {
+      "branch_id": 3,
+      "branch_name": "Narimanov",
+      "reported_deposits": 68487331.82,
+      "account_balance": 68487331.82,
+      "reported_loans": 50991901.09,
+      "original_loans": 80368943.17,
+      "outstanding_loans": 50991901.09
+    },
+    {
+      "branch_id": 4,
+      "branch_name": "Yasamal",
+      "reported_deposits": 61111672.51,
+      "account_balance": 61111672.51,
+      "reported_loans": 50169467.72,
+      "original_loans": 79375207.72,
+      "outstanding_loans": 50169467.72
+    },
+    {
+      "branch_id": 5,
+      "branch_name": "Khatai",
+      "reported_deposits": 70955864.01,
+      "account_balance": 70955864.01,
+      "reported_loans": 50362274.04,
+      "original_loans": 78919975.22,
+      "outstanding_loans": 50362274.04
+    },
+    {
+      "branch_id": 6,
+      "branch_name": "Ganja Central",
+      "reported_deposits": 35467576.37,
+      "account_balance": 35467576.37,
+      "reported_loans": 27289540.27,
+      "original_loans": 41915255.96,
+      "outstanding_loans": 27289540.27
+    },
+    {
+      "branch_id": 7,
+      "branch_name": "Ganja East",
+      "reported_deposits": 29864530.22,
+      "account_balance": 29864530.22,
+      "reported_loans": 25173283.16,
+      "original_loans": 39849245.08,
+      "outstanding_loans": 25173283.16
+    },
+    {
+      "branch_id": 8,
+      "branch_name": "Sumgayit Central",
+      "reported_deposits": 33366172.44,
+      "account_balance": 33366172.44,
+      "reported_loans": 23430690.63,
+      "original_loans": 37925011.85,
+      "outstanding_loans": 23430690.63
+    },
+    {
+      "branch_id": 9,
+      "branch_name": "Sumgayit Industrial",
+      "reported_deposits": 27908603.03,
+      "account_balance": 27908603.03,
+      "reported_loans": 20615521.69,
+      "original_loans": 33083879.26,
+      "outstanding_loans": 20615521.69
+    },
+    {
+      "branch_id": 10,
+      "branch_name": "Mingachevir",
+      "reported_deposits": 32366716.58,
+      "account_balance": 32366716.58,
+      "reported_loans": 26798713.06,
+      "original_loans": 43098853.2,
+      "outstanding_loans": 26798713.06
+    },
+    {
+      "branch_id": 11,
+      "branch_name": "Shaki",
+      "reported_deposits": 33814329.18,
+      "account_balance": 33814329.18,
+      "reported_loans": 26268062.52,
+      "original_loans": 41240678.75,
+      "outstanding_loans": 26268062.52
+    },
+    {
+      "branch_id": 12,
+      "branch_name": "Lankaran",
+      "reported_deposits": 35813481.0,
+      "account_balance": 35813481.0,
+      "reported_loans": 25467803.85,
+      "original_loans": 42926024.75,
+      "outstanding_loans": 25467803.85
+    },
+    {
+      "branch_id": 13,
+      "branch_name": "Quba",
+      "reported_deposits": 31701028.23,
+      "account_balance": 31701028.23,
+      "reported_loans": 27016689.63,
+      "original_loans": 42201634.38,
+      "outstanding_loans": 27016689.63
+    },
+    {
+      "branch_id": 14,
+      "branch_name": "Shirvan",
+      "reported_deposits": 27721166.48,
+      "account_balance": 27721166.48,
+      "reported_loans": 23410628.94,
+      "original_loans": 34976739.23,
+      "outstanding_loans": 23410628.94
+    },
+    {
+      "branch_id": 15,
+      "branch_name": "Nakhchivan",
+      "reported_deposits": 30338301.64,
+      "account_balance": 30338301.64,
+      "reported_loans": 25120438.01,
+      "original_loans": 41328918.07,
+      "outstanding_loans": 25120438.01
+    },
+    {
+      "branch_id": 16,
+      "branch_name": "Baku Business",
+      "reported_deposits": 65485727.21,
+      "account_balance": 65485727.21,
+      "reported_loans": 50259095.57,
+      "original_loans": 77711577.92,
+      "outstanding_loans": 50259095.57
+    },
+    {
+      "branch_id": 17,
+      "branch_name": "Baku Premium",
+      "reported_deposits": 71970024.82,
+      "account_balance": 71970024.82,
+      "reported_loans": 56206090.88,
+      "original_loans": 87702608.06,
+      "outstanding_loans": 56206090.88
+    },
+    {
+      "branch_id": 18,
+      "branch_name": "Baku West",
+      "reported_deposits": 69806579.65,
+      "account_balance": 69806579.65,
+      "reported_loans": 50455008.0,
+      "original_loans": 79494509.72,
+      "outstanding_loans": 50455008.0
+    },
+    {
+      "branch_id": 19,
+      "branch_name": "Baku North",
+      "reported_deposits": 74286185.63,
+      "account_balance": 74286185.63,
+      "reported_loans": 55235083.65,
+      "original_loans": 85074183.68,
+      "outstanding_loans": 55235083.65
+    },
+    {
+      "branch_id": 20,
+      "branch_name": "Baku South",
+      "reported_deposits": 55499418.77,
+      "account_balance": 55499418.77,
+      "reported_loans": 48303369.88,
+      "original_loans": 75104661.34,
+      "outstanding_loans": 48303369.88
+    },
+    {
+      "branch_id": 21,
+      "branch_name": "Aghjabadi",
+      "reported_deposits": 33418833.46,
+      "account_balance": 33418833.46,
+      "reported_loans": 23830399.69,
+      "original_loans": 38451306.73,
+      "outstanding_loans": 23830399.69
+    },
+    {
+      "branch_id": 22,
+      "branch_name": "Barda",
+      "reported_deposits": 34086642.59,
+      "account_balance": 34086642.59,
+      "reported_loans": 23900774.69,
+      "original_loans": 38899029.93,
+      "outstanding_loans": 23900774.69
+    },
+    {
+      "branch_id": 23,
+      "branch_name": "Gabala",
+      "reported_deposits": 37116457.43,
+      "account_balance": 37116457.43,
+      "reported_loans": 29930809.62,
+      "original_loans": 46638820.43,
+      "outstanding_loans": 29930809.62
+    },
+    {
+      "branch_id": 24,
+      "branch_name": "Masalli",
+      "reported_deposits": 30282825.31,
+      "account_balance": 30282825.31,
+      "reported_loans": 23968623.3,
+      "original_loans": 38435556.99,
+      "outstanding_loans": 23968623.3
+    },
+    {
+      "branch_id": 25,
+      "branch_name": "Khachmaz",
+      "reported_deposits": 27844254.97,
+      "account_balance": 27844254.97,
+      "reported_loans": 22494689.44,
+      "original_loans": 36533727.77,
+      "outstanding_loans": 22494689.44
+    }
+  ],
+  "concentration": [
+    {
+      "metric": "top_10_deposit_customers",
+      "amount": 2212667.67
+    },
+    {
+      "metric": "top_10_borrowers",
+      "amount": 5618658.37
+    }
+  ],
+  "coverage": [
+    {
+      "borrowers": 11292
+    }
+  ],
+  "profit_checks": [
+    {
+      "revenue_mismatches": 0,
+      "expense_mismatches": 0,
+      "profit_mismatches": 0,
+      "min_branch_profit": 376795.05
+    }
+  ],
+  "data_quality": [
+    {
+      "check_name": "transactions_nonpositive",
+      "issues": 0
+    },
+    {
+      "check_name": "transaction_owner_or_branch_mismatch",
+      "issues": 0
+    },
+    {
+      "check_name": "negative_account_balances",
+      "issues": 0
+    },
+    {
+      "check_name": "loan_outstanding_outside_original",
+      "issues": 0
+    },
+    {
+      "check_name": "paid_loans_with_balance",
+      "issues": 0
+    },
+    {
+      "check_name": "transactions_after_snapshot_date",
+      "issues": 0
+    },
+    {
+      "check_name": "transactions_before_account_opening",
+      "issues": 0
+    },
+    {
+      "check_name": "loans_before_customer_registration",
+      "issues": 0
+    },
+    {
+      "check_name": "accounts_before_customer_registration",
+      "issues": 0
+    }
+  ],
+  "legacy_balance_reconciliation": [
+    {
+      "mismatches": 0,
+      "absolute_difference": 0.0
+    }
+  ],
+  "loan_dates": [
+    {
+      "invalid_terms": 0,
+      "active_past_maturity": 0
+    }
+  ],
+  "customer_age": [
+    {
+      "min_age": 23.770508634674222,
+      "max_age": 75.75788688337201
+    }
+  ],
+  "product_transactions": [
+    {
+      "transaction_type": "Deposit",
+      "transactions": 7271338,
+      "gross_amount": 696970950.34
+    },
+    {
+      "transaction_type": "Fee",
+      "transactions": 45449,
+      "gross_amount": 408591.38
+    },
+    {
+      "transaction_type": "Withdrawal",
+      "transactions": 7268613,
+      "gross_amount": 689589298.17
+    }
+  ],
+  "annual_interest_by_status": [
+    {
+      "loan_status": "Active",
+      "annualized_interest": 88063450.42
+    },
+    {
+      "loan_status": "Overdue",
+      "annualized_interest": 4125582.16
+    },
+    {
+      "loan_status": "Paid",
+      "annualized_interest": 0.0
+    }
+  ],
+  "patterns_by_account": [],
+  "annual_interest_model": [
+    {
+      "annualized_loan_interest": 92189032.58
+    }
+  ],
+  "annual_deposit_model": [
+    {
+      "annualized_deposit_interest": 19568811.21
+    }
+  ],
+  "account_transaction_pattern": [
+    {
+      "min_transactions": 47,
+      "max_transactions": 785,
+      "accounts_with_transactions": 45449
+    }
+  ],
+  "last_activity_by_type": [
+    {
+      "transaction_type": "Deposit",
+      "earliest": "2025-01-01",
+      "latest": "2025-12-31"
+    },
+    {
+      "transaction_type": "Fee",
+      "earliest": "2025-01-01",
+      "latest": "2025-12-31"
+    },
+    {
+      "transaction_type": "Withdrawal",
+      "earliest": "2025-01-01",
+      "latest": "2025-12-31"
+    }
+  ],
+  "branch_interest_model": [
+    {
+      "branch_id": 1,
+      "reported_interest": 4825580.82,
+      "annualized_interest": 5083223.82
+    },
+    {
+      "branch_id": 2,
+      "reported_interest": 5016725.07,
+      "annualized_interest": 5284219.24
+    },
+    {
+      "branch_id": 3,
+      "reported_interest": 5043972.29,
+      "annualized_interest": 5355510.38
+    },
+    {
+      "branch_id": 4,
+      "reported_interest": 4981972.83,
+      "annualized_interest": 5133990.35
+    },
+    {
+      "branch_id": 5,
+      "reported_interest": 4841132.51,
+      "annualized_interest": 5153306.08
+    },
+    {
+      "branch_id": 6,
+      "reported_interest": 2823545.86,
+      "annualized_interest": 2936770.12
+    },
+    {
+      "branch_id": 7,
+      "reported_interest": 2526033.35,
+      "annualized_interest": 2600059.73
+    },
+    {
+      "branch_id": 8,
+      "reported_interest": 2393311.06,
+      "annualized_interest": 2479123.64
+    },
+    {
+      "branch_id": 9,
+      "reported_interest": 2108806.74,
+      "annualized_interest": 2226128.48
+    },
+    {
+      "branch_id": 10,
+      "reported_interest": 2614020.12,
+      "annualized_interest": 2757365.78
+    },
+    {
+      "branch_id": 11,
+      "reported_interest": 2643722.29,
+      "annualized_interest": 2747231.6
+    },
+    {
+      "branch_id": 12,
+      "reported_interest": 2552674.04,
+      "annualized_interest": 2623627.76
+    },
+    {
+      "branch_id": 13,
+      "reported_interest": 2693340.78,
+      "annualized_interest": 2838546.19
+    },
+    {
+      "branch_id": 14,
+      "reported_interest": 2342625.09,
+      "annualized_interest": 2472806.8
+    },
+    {
+      "branch_id": 15,
+      "reported_interest": 2644053.4,
+      "annualized_interest": 2707413.08
+    },
+    {
+      "branch_id": 16,
+      "reported_interest": 4960696.27,
+      "annualized_interest": 5143498.9
+    },
+    {
+      "branch_id": 17,
+      "reported_interest": 5497848.39,
+      "annualized_interest": 5771604.08
+    },
+    {
+      "branch_id": 18,
+      "reported_interest": 5012426.66,
+      "annualized_interest": 5238953.06
+    },
+    {
+      "branch_id": 19,
+      "reported_interest": 5576378.99,
+      "annualized_interest": 5853385.57
+    },
+    {
+      "branch_id": 20,
+      "reported_interest": 4787417.21,
+      "annualized_interest": 4974194.18
+    },
+    {
+      "branch_id": 21,
+      "reported_interest": 2344366.56,
+      "annualized_interest": 2469644.07
+    },
+    {
+      "branch_id": 22,
+      "reported_interest": 2372549.56,
+      "annualized_interest": 2510243.88
+    },
+    {
+      "branch_id": 23,
+      "reported_interest": 2839284.12,
+      "annualized_interest": 3048720.23
+    },
+    {
+      "branch_id": 24,
+      "reported_interest": 2386664.65,
+      "annualized_interest": 2492730.9
+    },
+    {
+      "branch_id": 25,
+      "reported_interest": 2234301.79,
+      "annualized_interest": 2286734.66
+    }
+  ],
+  "foreign_key_checks": [
+    {
+      "check_name": "orphan_accounts_customer",
+      "issues": 0
+    },
+    {
+      "check_name": "orphan_accounts_branch",
+      "issues": 0
+    },
+    {
+      "check_name": "orphan_loans_customer",
+      "issues": 0
+    },
+    {
+      "check_name": "orphan_transactions_account",
+      "issues": 0
+    }
+  ],
+  "derived": {
+    "net_interest_income": 68494639.22,
+    "operating_income_net_of_interest_cost": 70834813.1,
+    "profit_margin_percent": 39.57251625157272,
+    "operating_cost_to_income_percent": 49.495188362401436,
+    "total_expense_to_gross_revenue_percent": 60.42748374842728,
+    "outstanding_loans": 885501530.84,
+    "account_balances": 1139873847.61,
+    "outstanding_loan_to_deposit_percent": 77.68416941020726,
+    "reported_loan_to_deposit_percent": 77.68416941020726,
+    "overdue_outstanding": 39484240.3,
+    "overdue_exposure_percent": 4.458969174513414,
+    "borrower_penetration_percent": 37.64,
+    "accounts_per_customer": 1.5149666666666666,
+    "top5_branch_profit_share_percent": 38.730964549315935,
+    "staff": 613
+  },
+  "dataset_version": "expanded-2025-v1",
+  "source_file": "bank_portfolio_expanded_2025.sql.gz",
+  "original_source_sha256": "23ea74f1414f1a54d41b5d7ae86562a38b6255073f4f515443930e8023adade1",
+  "generation_seed": 20251005,
+  "transaction_count_scope": "1-80 per CUSTOMER per month; distributed across that customer accounts",
+  "generation_validation": {
+    "customer_months": 360000,
+    "min_transactions_per_customer_month": 1,
+    "max_transactions_per_customer_month": 80,
+    "min_transactions_per_customer_year": 167,
+    "max_transactions_per_customer_year": 797,
+    "closing_balance_mismatches": 0,
+    "negative_running_balances": 0,
+    "account_fee_total_mismatches": 0,
+    "nonpositive_amounts": 0,
+    "closing_reconciliation_entries": 45449,
+    "closing_reconciliation_gross_amount": 83571535.33,
+    "raw_sql_bytes": 1251262474,
+    "gzip_bytes": 143913163,
+    "generated_transactions": 14585400,
+    "elapsed_seconds": 135.23
+  }
+}

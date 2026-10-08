@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+*.log
+*.sock
+*.pid
+analysis_cache.db
+data/*.sql
+bank_portfolio_expanded_2025.sql*
+*.zip
+historical_2025/05_historical_2025.sql
+historical_2025/*.building
+historical_2025/build.lock

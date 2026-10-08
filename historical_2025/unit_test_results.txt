@@ -1,0 +1,14 @@
+test_cure_restarts_accrual_and_new_episode_has_own_cap (__main__.ScenarioTests.test_cure_restarts_accrual_and_new_episode_has_own_cap) ... ok
+test_exclusion_restarts_across_other_loans (__main__.ScenarioTests.test_exclusion_restarts_across_other_loans) ... ok
+test_future_arrears_not_used_for_current_decision (__main__.ScenarioTests.test_future_arrears_not_used_for_current_decision) ... ok
+test_interest_stops_but_delay_continues (__main__.ScenarioTests.test_interest_stops_but_delay_continues) ... ok
+test_money_is_conserved (__main__.ScenarioTests.test_money_is_conserved) ... ok
+test_no_future_cash_or_restructuring (__main__.ScenarioTests.test_no_future_cash_or_restructuring) ... ok
+test_partial_payment_does_not_restart_cap (__main__.ScenarioTests.test_partial_payment_does_not_restart_cap) ... ok
+test_restructuring_rate_applies_from_effective_day (__main__.ScenarioTests.test_restructuring_rate_applies_from_effective_day) ... ok
+test_twelve_month_date (__main__.ScenarioTests.test_twelve_month_date) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.018s
+
+OK

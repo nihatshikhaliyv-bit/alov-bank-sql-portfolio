@@ -1,0 +1,1 @@
+e62827dcb6e040e609f5ae57a7bc5b4983b65530d55f96d5ed8f451a7b0f0ad2  bank_portfolio_expanded_2025.sql.gz

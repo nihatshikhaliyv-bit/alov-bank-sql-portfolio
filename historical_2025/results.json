@@ -1,0 +1,41 @@
+{
+  "as_of": "2025-12-31",
+  "counts": {
+    "branches": 25,
+    "customers": 30000,
+    "customer_income": 1980000,
+    "loan_payments": 654730,
+    "loan_month_end": 718931,
+    "loan_due_items": 718931,
+    "loans": 16000,
+    "arrears_episodes": 97039,
+    "restructurings": 930,
+    "credit_assessments": 360000,
+    "premises": 25,
+    "premises_monthly": 300,
+    "branch_financials": 25,
+    "tax_payments": 3,
+    "tax_reconciliation": 1,
+    "scenario_metadata": 8
+  },
+  "finance_azn": {
+    "profit_before_tax": "22836777.83",
+    "taxable_profit": "53465361.48",
+    "current_tax": "10693072.30",
+    "advances": "4811882.55",
+    "tax_payable": "5881189.75",
+    "profit_after_current_tax": "12143705.53",
+    "impairment_overlay": "30525628.50"
+  },
+  "decisions_december": {
+    "Eligible for assessment": 22745,
+    "Decline: 12-month exclusion": 941,
+    "Decline: affordability": 4693,
+    "Decline: unresolved arrears": 1562,
+    "Manual review required": 59
+  },
+  "outstanding_principal_azn": "1018104629.34",
+  "original_source_sha256": "23ea74f1414f1a54d41b5d7ae86562a38b6255073f4f515443930e8023adade1",
+  "sql_sha256": "ff2e1ea47a7ad04056209e1b6ada4948997cf498e5076f74223234f4761e0770",
+  "assertions": "All-loan principal and interest conservation; <=90 charged days per episode; restructuring projected interest higher."
+}
