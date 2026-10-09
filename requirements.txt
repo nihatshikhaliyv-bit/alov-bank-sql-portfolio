@@ -1,2 +1,2 @@
-# Only required to regenerate chart PNGs; extraction/generation use the standard library.
+# Only required for regenerating final-scenario charts
 matplotlib>=3.8,<4

@@ -6,17 +6,15 @@ This extension reconstructs all 16,000 original loans from their 2021–2024 iss
 
 ## What to install
 
-The new reporting database is **`banking_portfolio_2025`**. The existing **`banking_portfolio_demo`** remains the deposit-activity and V2 operational demonstration. This is an isolated historical reporting scenario, not an in-place V2 migration. The new schema's `loans.outstanding_amount` contains the recalculated balances; `source_outstanding` retains the old number for comparison. Do not use the old database's loan balance or profit figures as the new scenario's results.
-
-Why separate? The V2 repayment procedures use the current date, opening GL balances were installed in 2026, and the expanded deposit activity already contains 1–80 transactions per customer per month. Retrofitting historical loan payments into those records would require regenerating account balances and the GL opening together. The historical scenario therefore records loan payments as **external cash settlements**, not debits to those deposit accounts. Its repayment events are not part of the 1–80 deposit-activity count. It does not claim a consolidated, fully reconciled core banking ledger.
+The final reporting database is **`banking_portfolio_2025`**. After repeated refinements, this is the selected database for the current Alov Bank portfolio. Its loan balances, reports, charts and tax estimates use the same reporting cutoff. Loan collections are externally settled; deposit transactions and a consolidated general ledger are outside the scope.
 
 ### Windows installation
 
 1. Extract the ZIP to a normal folder, not inside the ZIP viewer.
-2. Open Command Prompt in the extracted repository root and run `py historical_2025/build.py` (Python 3.10+). Wait for the completion summary; this creates the SQL file. Then use this command, replacing the file path with the actual generated SQL location:
+2. Follow [the final database download guide](../data/README.md), then extract the verified gzip archive. Open Command Prompt and use this command, replacing the path with the extracted SQL location:
 
 ```bat
-"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_PROJECT_FOLDER\historical_2025\05_historical_2025.sql"
+"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_PROJECT_FOLDER\alov_bank_final_2025.sql"
 ```
 
 Enter your MySQL password when prompted. This is a **Command Prompt command, not a command to paste at `mysql>`**. The database name must be unused. Do not add `--force`: batch mode should stop on the first SQL error. No `DROP DATABASE` or `DROP TABLE` is included. Do not rerun over a partial import; preserve the error and investigate it first.
@@ -104,9 +102,9 @@ Advance payments are demonstration entries (three payments of 15% of annual curr
 
 Strengths include traceable repayment history, separation of principal and interest, visible frozen-interest periods, repeat-arrears tracking, income-sensitive lending limits, executed restructuring history, and a clear profit-to-tax reconciliation. Premises records distinguish cash paid from accounting expense and withholding from the bank's own cost.
 
-Weaknesses remain material: balances depend on synthetic behavioural assumptions; old loan approvals are inherited rather than validated; deposit activity and loan cash settlement are separate; funding/other expenses are partly inherited; collateral, regulatory capital/liquidity and production GL consolidation are absent. Neither positive profit nor higher projected restructuring interest establishes that a real bank is safe or viable.
+Weaknesses remain material: balances depend on synthetic behavioural assumptions; old loan approvals are inherited rather than validated; deposit-account transactions are outside the model; funding/other expenses are partly inherited; collateral, regulatory capital/liquidity and production GL consolidation are absent. Neither positive profit nor higher projected restructuring interest establishes that a real bank is safe or viable.
 
-See `results.json` for generated amounts and `VALIDATION.md` for tests actually executed. Original root-level charts and analysis describe the **earlier baseline**, not this scenario. Do not reuse their profit figures for the new reporting date without relabelling them.
+See `results.json` for generated amounts and `VALIDATION.md` for tests actually executed. All charts under assets/ and the main README describe this final scenario.
 
 Read [BANK_ANALYSIS_2025.md](BANK_ANALYSIS_2025.md) for the new scenario's results, strengths, weaknesses and development priorities, and [SOURCES.md](SOURCES.md) for external references.
 
@@ -121,8 +119,4 @@ python historical_2025/test_scenario.py
 
 Generation writes SQL, results and no database connections. The source compressed seed remains unchanged. Python 3.10+ standard library only. Run `06_checks.sql` after importing to MySQL 8.0+.
 
-The generator, compressed source seed, documentation and validation results are published in this repository. The generated `05_historical_2025.sql` exceeds the regular per-file limit and is excluded by `.gitignore`. Before importing, run `py historical_2025/build.py` from the repository root (Python 3.10+; macOS/Linux: `python3 historical_2025/build.py`). Wait for completion. It creates the historical SQL locally; no Release download is needed.
-
-## Future work
-
-January 2026 restructurings; a unified historical cash/GL reconstruction; mortgage collateral and LTV; business cash-flow underwriting; payroll and VAT detail; deferred tax; IFRS 9 staging/ECL; bank-wide fixed assets; external credit bureau data; access control and concurrency tests. The bank name and open-source license still need the owner's decision before publication.
+The final database is published under [data/](../data/README.md), with a verified downloader. Regeneration is optional: run `py historical_2025/build.py` from the repository root (Python 3.10+). Its internal seed under `source/` is retained only for reproducibility, not offered as another database version.

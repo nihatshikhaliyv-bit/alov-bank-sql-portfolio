@@ -1,39 +1,34 @@
-"""Render report visuals from snapshot_metrics.json. Requires matplotlib."""
+"""Charts for the final Alov Bank scenario. Python 3.10+, matplotlib."""
 from pathlib import Path
 import json
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
-R=Path(__file__).resolve().parents[1];m=json.loads((R/('analysis/expanded_metrics.json' if (R/'analysis/expanded_metrics.json').exists() else 'analysis/snapshot_metrics.json')).read_text());f=m['financial_totals'][0];d=m['derived']
-navy='#142B45';teal='#147D83';gold='#C58124';gray='#647589';bg='#F6F8FB';red='#B65D46'
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'axes.spines.top':False,'axes.spines.right':False,'axes.labelcolor':navy,'text.color':navy,'axes.edgecolor':'#D2DCE5','xtick.color':gray,'ytick.color':navy,'figure.facecolor':bg,'axes.facecolor':bg,'savefig.facecolor':bg})
-def footer(fig,t):fig.text(.055,.025,t,fontsize=9,color=gray)
-def save(fig,name):fig.savefig(R/'assets'/name,dpi=170,bbox_inches='tight');plt.close(fig)
-fig,axs=plt.subplots(2,2,figsize=(13,9));fig.subplots_adjust(top=.83,bottom=.13,hspace=.47,wspace=.4)
-fig.suptitle('BANK PORTFOLIO  /  Financial snapshot',x=.055,y=.97,ha='left',fontsize=23,fontweight='bold')
-fig.text(.055,.91,'30,000 customers     •     25 branches     •     AZN 1.140bn deposits     •     AZN 885.5m outstanding loans',fontsize=12)
-a=axs[0,0];labels=['Interest income','Other income','Fee income'];vals=[f[x]/1e6 for x in ['interest_income','other_income','fee_income']];a.barh(labels,vals,color=[teal,gray,gold]);a.invert_yaxis();a.set_title('97.4% of revenue comes from interest',loc='left',fontweight='bold');a.set_xlabel('AZN million');a.set_xlim(0,102)
-for i,v in enumerate(vals):a.text(v+1,i,f'{v:,.2f}',va='center')
-a=axs[0,1];labs=['Revenue','Interest\nexpense','Operating\nexpense','Reported\nprofit'];vs=[f[x]/1e6 for x in ['total_revenue','interest_expense','operating_expense','net_profit']];a.bar(labs,vs,color=[teal,gray,gray,navy]);a.set_ylim(0,105);a.set_ylabel('AZN million');a.tick_params(axis='x',labelsize=8);a.set_title('AZN 35.77m reported model profit',loc='left',fontweight='bold')
-for i,v in enumerate(vs):a.text(i,v+2,f'{v:.2f}',ha='center')
-a=axs[1,0];ls=m['loans'];a.barh([r['loan_type'] for r in ls],[r['outstanding']/1e6 for r in ls],color=[navy,teal,teal,teal,gold]);a.invert_yaxis();a.set_xlim(0,780);a.set_xlabel('Outstanding principal · AZN million');a.set_title('Mortgages account for 73.5% of loans',loc='left',fontweight='bold')
-for i,r in enumerate(ls):a.text(r['outstanding']/1e6+9,i,f"{r['outstanding']/d['outstanding_loans']:.1%}",va='center')
-a=axs[1,1];ac=m['accounts'];a.barh([r['account_type'] for r in ac],[r['balance']/1e6 for r in ac],color=[teal,navy,gray,gold]);a.invert_yaxis();a.set_xlabel('Account balances · AZN million');a.set_title('Savings hold 52.9% of deposits',loc='left',fontweight='bold')
-footer(fig,'Synthetic data • Financial table labeled 2025; balances from exported snapshot • Profit excludes unmodeled tax/provision adjustments.\nSource: branch_financials, accounts and loans. No comparison with real banks is implied.')
-save(fig,'financial_overview.png')
-fig,axs=plt.subplots(1,2,figsize=(13,5.6));fig.subplots_adjust(top=.77,bottom=.22,wspace=.45);fig.suptitle('RISK & CONCENTRATION  /  Where to focus',x=.055,y=.95,ha='left',fontsize=21,fontweight='bold')
-a=axs[0];ls=sorted(m['loans'],key=lambda r:r['overdue_outstanding']/r['outstanding'],reverse=True);vals=[100*r['overdue_outstanding']/r['outstanding'] for r in ls];a.barh([r['loan_type'] for r in ls],vals,color=gold);a.invert_yaxis();a.set_xlim(0,7.4);a.axvline(d['overdue_exposure_percent'],color=navy,linestyle='--',label='Whole portfolio: 4.46%');a.set_xlabel('Overdue-labeled principal / product outstanding (%)');a.legend(loc='lower right',fontsize=8);a.set_title('Relative delinquency differs by product',loc='left',fontweight='bold')
-for i,v in enumerate(vals):a.text(v+.08,i,f'{v:.2f}%',va='center')
-a=axs[1];regions=m['regions'];a.barh([r['region'] for r in regions],[r['net_profit']/f['net_profit']*100 for r in regions],color=[navy]+[teal]*7);a.invert_yaxis();a.set_xlim(0,87);a.set_xlabel('Share of reported profit (%)');a.set_title('Absheron contributes 75.4% of profit',loc='left',fontweight='bold')
-for i,r in enumerate(regions):a.text(r['net_profit']/f['net_profit']*100+1,i,f"{r['net_profit']/f['net_profit']:.1%}",va='center')
-footer(fig,'Synthetic snapshot • “Overdue” is a stored label, not a verified 90-day NPL classification.\nAbsheron is the dataset’s region grouping; its branch composition is documented in the report.')
-save(fig,'risk_concentration.png')
-fig,a=plt.subplots(figsize=(13,5.6));fig.subplots_adjust(top=.76,bottom=.23);fig.suptitle('TRANSACTION HISTORY  /  Expanded 2025 simulation',x=.055,y=.96,ha='left',fontsize=20,fontweight='bold')
-months=[x['month'] for x in m['monthly_transactions']];bottom=[0]*12
-for typ,col in [('Deposit',teal),('Withdrawal',navy),('Fee',gold)]:
- vals=[sum(x['gross_amount'] for x in m['monthly_types'] if x['month']==mo and x['transaction_type']==typ)/1e6 for mo in months];a.bar(range(12),vals,bottom=bottom,color=col,label=typ);bottom=[a+b for a,b in zip(bottom,vals)]
-a.set_xticks(range(12),[x[-2:] for x in months]);a.set_xlabel('2025 month');a.set_ylabel('Gross recorded amount · AZN million');a.legend(ncol=3,loc='upper right');a.set_ylim(0,220);a.text(.015,.95,'14,585,400 rows · 1–80 per customer/month',transform=a.transAxes,va='top',fontsize=10)
-footer(fig,'Synthetic scenario • Includes AZN 83.57m of labeled closing-balance reconciliation entries; total activity is not revenue.\nAll 2025 months are covered. Original balances and fee totals are preserved; no real growth or seasonality is implied.')
-save(fig,'transaction_pattern.png')
-print('Created three charts.')
+R=Path(__file__).resolve().parents[1]
+m=json.loads((R/'historical_2025/results.json').read_text())
+t=json.loads((R/'analysis/chart_data.json').read_text())['monthly']
+A=R/'assets';A.mkdir(exist_ok=True)
+plt.rcParams.update({'font.family':'DejaVu Sans','font.size':11,'axes.spines.top':False,'axes.spines.right':False,'figure.facecolor':'#f5f3ee','axes.facecolor':'#f5f3ee','text.color':'#25343c','axes.labelcolor':'#25343c'})
+def finish(fig,name,note):
+ fig.text(.07,.035,'Synthetic educational data | Final scenario: 31 Dec 2025\n'+note,fontsize=9,color='#52646e')
+ fig.savefig(A/name,dpi=180,bbox_inches='tight');plt.close(fig)
+f={k:float(v)/1e6 for k,v in m['finance_azn'].items()}
+fig,ax=plt.subplots(figsize=(11,6));fig.subplots_adjust(left=.26,bottom=.2,top=.82,right=.88)
+labels=['Taxable profit','Impairment expense','Profit before tax','Current tax','Profit after current tax'];values=[f['taxable_profit'],f['impairment_overlay'],f['profit_before_tax'],f['current_tax'],f['profit_after_current_tax']]
+ax.barh(labels[::-1],values[::-1],color=['#dc662e','#8197a4','#253f4e','#8197a4','#253f4e']);ax.set_xlim(0,62);ax.set_xlabel('AZN millions');ax.grid(axis='x',alpha=.15);ax.set_axisbelow(True)
+for i,v in enumerate(values[::-1]):ax.text(v+.7,i,f'{v:,.2f}',va='center',fontweight='bold')
+fig.suptitle('ALOV BANK | Financial results',x=.07,y=.97,ha='left',fontsize=22,fontweight='bold')
+finish(fig,'financial_overview.png','Measures are distinct, not additive. Illustrative impairment and current-tax model; no deferred tax.')
+fig,ax=plt.subplots(figsize=(11,6));fig.subplots_adjust(left=.34,bottom=.2,top=.82,right=.88)
+pairs=list(m['decisions_december'].items());labels=[x[0].replace('Decline: ','Declined: ') for x in pairs];values=[x[1] for x in pairs]
+ax.barh(labels[::-1],values[::-1],color=['#8197a4','#dc662e','#dc662e','#dc662e','#253f4e']);ax.set_xlim(0,26000);ax.set_xlabel('Customers');ax.xaxis.set_major_formatter(FuncFormatter(lambda x,_:f'{x:,.0f}'));ax.grid(axis='x',alpha=.15);ax.set_axisbelow(True)
+for i,v in enumerate(values[::-1]):ax.text(v+350,i,f'{v:,} ({v/30000:.1%})',va='center',fontsize=10)
+fig.suptitle('ALOV BANK | Lending assessments',x=.07,y=.97,ha='left',fontsize=22,fontweight='bold')
+finish(fig,'lending_assessments.png','30,000 customers assessed at year-end. Eligibility means further assessment, not credit approval.')
+fig,(ax,bx)=plt.subplots(2,1,figsize=(11,8),sharex=True);fig.subplots_adjust(left=.1,bottom=.16,top=.86,hspace=.35,right=.94)
+x=list(range(12));ax.plot(x,[r['outstanding_principal']/1e9 for r in t],color='#253f4e',linewidth=2.5,marker='o');ax.set_ylabel('Outstanding principal\nAZN billions');ax.grid(alpha=.15)
+bx.plot(x,[r['loans_over_90_days'] for r in t],color='#dc662e',linewidth=2,marker='o',label='Over 90 days overdue');bx.plot(x,[r['loans_with_frozen_interest'] for r in t],color='#253f4e',linewidth=2,marker='o',label='Frozen interest');bx.set_ylabel('Loan count');bx.set_xticks(x,[r['month'][:3] for r in t]);bx.legend(frameon=False,loc='upper left');bx.grid(alpha=.15)
+fig.suptitle('ALOV BANK | Loan book through 2025',x=.07,y=.97,ha='left',fontsize=22,fontweight='bold')
+finish(fig,'loan_trends.png','Inherited loan book; no new originations. Counts are not a balance-weighted NPL ratio.')
+print('Created three final-scenario charts')

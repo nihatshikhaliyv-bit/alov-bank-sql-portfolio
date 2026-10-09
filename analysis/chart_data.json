@@ -1,0 +1,78 @@
+{
+  "reporting_date": "2025-12-31",
+  "source": "Final historical scenario; monthly figures from published reporting table",
+  "monthly": [
+    {
+      "month": "January",
+      "outstanding_principal": 1109843302.13,
+      "loans_over_90_days": 447,
+      "loans_with_frozen_interest": 460
+    },
+    {
+      "month": "February",
+      "outstanding_principal": 1101603538.48,
+      "loans_over_90_days": 392,
+      "loans_with_frozen_interest": 400
+    },
+    {
+      "month": "March",
+      "outstanding_principal": 1093130679.96,
+      "loans_over_90_days": 398,
+      "loans_with_frozen_interest": 405
+    },
+    {
+      "month": "April",
+      "outstanding_principal": 1084679404.33,
+      "loans_over_90_days": 397,
+      "loans_with_frozen_interest": 401
+    },
+    {
+      "month": "May",
+      "outstanding_principal": 1076485956.63,
+      "loans_over_90_days": 453,
+      "loans_with_frozen_interest": 461
+    },
+    {
+      "month": "June",
+      "outstanding_principal": 1068227506.05,
+      "loans_over_90_days": 467,
+      "loans_with_frozen_interest": 477
+    },
+    {
+      "month": "July",
+      "outstanding_principal": 1059915202.17,
+      "loans_over_90_days": 471,
+      "loans_with_frozen_interest": 481
+    },
+    {
+      "month": "August",
+      "outstanding_principal": 1051611870.95,
+      "loans_over_90_days": 471,
+      "loans_with_frozen_interest": 482
+    },
+    {
+      "month": "September",
+      "outstanding_principal": 1043183746.35,
+      "loans_over_90_days": 497,
+      "loans_with_frozen_interest": 507
+    },
+    {
+      "month": "October",
+      "outstanding_principal": 1034865921.1,
+      "loans_over_90_days": 509,
+      "loans_with_frozen_interest": 524
+    },
+    {
+      "month": "November",
+      "outstanding_principal": 1026504072.3,
+      "loans_over_90_days": 516,
+      "loans_with_frozen_interest": 534
+    },
+    {
+      "month": "December",
+      "outstanding_principal": 1018104629.34,
+      "loans_over_90_days": 512,
+      "loans_with_frozen_interest": 535
+    }
+  ]
+}

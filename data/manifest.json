@@ -1,0 +1,35 @@
+{
+  "filename": "alov_bank_final_2025.sql.gz",
+  "database": "banking_portfolio_2025",
+  "reporting_date": "2025-12-31",
+  "size_bytes": 50915104,
+  "sha256": "f6b60d890ecb658a1eb090b9738b847255e4993219cf443e231021a15f9fd44f",
+  "sql_sha256": "ff2e1ea47a7ad04056209e1b6ada4948997cf498e5076f74223234f4761e0770",
+  "parts": [
+    {
+      "filename": "alov_bank_final_2025.sql.gz.part001",
+      "size_bytes": 10485760,
+      "sha256": "1dcc46d1dc7ac91bae65b141d2a2056f37e1dbf714a53a8eb58367eff8e5983b"
+    },
+    {
+      "filename": "alov_bank_final_2025.sql.gz.part002",
+      "size_bytes": 10485760,
+      "sha256": "2273456184524cc877052510dd1bfa8822a9bea806fd8c54e2d5822f37dd789b"
+    },
+    {
+      "filename": "alov_bank_final_2025.sql.gz.part003",
+      "size_bytes": 10485760,
+      "sha256": "27141b01894915ed136b677c3dd8625da9d5e8a5de9f8c2459ae88313f0eed05"
+    },
+    {
+      "filename": "alov_bank_final_2025.sql.gz.part004",
+      "size_bytes": 10485760,
+      "sha256": "0404d74f6db11267cf37ca5fe3e5a46f1b691ea9f7fa08a5aee46874ac593745"
+    },
+    {
+      "filename": "alov_bank_final_2025.sql.gz.part005",
+      "size_bytes": 8972064,
+      "sha256": "3ac377154335ea52d17e84d3779d1cb67e6452093bf624e9697f7223a8df1d43"
+    }
+  ]
+}

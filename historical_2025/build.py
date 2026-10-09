@@ -28,7 +28,7 @@ def money(n):
     return f'{D(n)/100:.2f}'
 
 def source_rows():
-    raw = gzip.decompress((ROOT / 'data/portfolio_snapshot.sql.gz').read_bytes())
+    raw = gzip.decompress((HERE / 'source/source_seed.sql.gz').read_bytes())
     text = raw.decode('utf-8')
     tables = {}
     tok = re.compile(r"'(?:\\.|[^'\\])*'|NULL|-?\d+(?:\.\d+)?")

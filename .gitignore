@@ -7,10 +7,10 @@ __pycache__/
 *.log
 *.sock
 *.pid
-analysis_cache.db
-data/*.sql
-bank_portfolio_expanded_2025.sql*
 *.zip
+alov_bank_final_2025.sql
+alov_bank_final_2025.sql.gz
+*.downloading
 historical_2025/05_historical_2025.sql
 historical_2025/*.building
 historical_2025/build.lock

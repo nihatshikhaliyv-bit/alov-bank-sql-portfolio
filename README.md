@@ -24,21 +24,17 @@ The main questions are:
 - How do premises costs and tax adjustments affect reported profitability?
 - Which reconciliation checks support the results, and which limitations remain?
 
-## Project structure and reporting scope
+## Final portfolio version
 
-The project contains related demonstrations with **different accounting boundaries**.
+After repeated refinements and validation, **this is the final database for the current Alov Bank portfolio**: `banking_portfolio_2025`, reporting at 31 December 2025. All figures, charts, analysis and installation instructions in this repository refer to this version. Superseded database downloads and their reports have been removed from the current branch; earlier commits retain the development history.
 
-| Component | Database / location | Purpose |
-|---|---|---|
-| Original seed | `data/portfolio_snapshot.sql.gz` | Source customer, branch, account and loan records; earlier financial assumptions |
-| Expanded account activity and V2 operations | `banking_portfolio_demo` | 14,585,400 synthetic account transactions and a separate operational-controls/GL demonstration |
-| Historical lending and financial reporting | `banking_portfolio_2025` | Reconstructed loans, income histories, credit assessments, premises and illustrative tax reporting |
+Loan payments use an external settlement assumption. This database does not include deposit-account transactions or a consolidated cash/general ledger. The final-version label describes the selected portfolio release, not a production-ready banking system.
 
-**The current analysis below refers to `banking_portfolio_2025`.** Its loan balances and financial results replace the old snapshot figures for this scenario. Original charts and documents under `assets/` and `docs/` describe the earlier baseline unless explicitly stated otherwise.
+Download the database using the [final database guide](data/README.md).
 
-Historical loan payments use an **external settlement assumption**. They are not debited from the expanded deposit accounts or posted into the existing V2 general ledger. Consequently, these components must not be presented as one fully reconciled cash ledger or consolidated banking system. Integrating them is a future development task.
-
-The expanded account-activity dataset's 1–80 transactions per customer per month applies to that dataset. Historical loan-payment records are separate events and are not included in that count.
+![Alov Bank financial results](assets/financial_overview.png)
+![Alov Bank lending assessments](assets/lending_assessments.png)
+![Alov Bank 2025 loan trends](assets/loan_trends.png)
 
 ## Dataset at a glance
 
@@ -54,8 +50,6 @@ The expanded account-activity dataset's 1–80 transactions per customer per mon
 | Monthly income observations, July 2020–December 2025 | 1,980,000 |
 | Monthly lending assessments during 2025 | 360,000 |
 | Rented / owned branches | 20 / 5 |
-| Accounts in the separate baseline/expanded component | 45,449 |
-| Transactions in the separate expanded component | 14,585,400 |
 
 Original loans were issued between 2021 and 2024. Reconstructing their opening history is necessary to calculate consistent 2025 balances. Record counts covering the full reconstructed history must not be labelled as 2025-only activity.
 
@@ -76,7 +70,7 @@ The reporting clock stops at **31 December 2025**. Later cash payments and execu
 
 **Principal is not income.** It is money originally lent that customers still owe. Principal collections reduce the loan asset; interest and eligible fees contribute to income. Accounting profit is also not the same as cash available to spend.
 
-The reconstructed outstanding balance differs from the source snapshot because the payment history has been regenerated. That difference is a scenario revision, not evidence of equivalent new lending or portfolio growth.
+Outstanding principal is calculated from original loan contracts and reconstructed principal repayments; it is not a measure of new loan originations.
 
 ### Why taxable profit exceeds accounting profit
 
@@ -249,7 +243,6 @@ These are strengths of an educational implementation, not evidence that Alov Ban
 | Historical generator | Nine behavioural tests passed | Covers interest caps, cures, partial payments, rate-effective dates, exclusion rules, cutoff and future-information safeguards |
 | Historical SQL | 32 checks returned zero issues in MySQL 8.4.11 | Full dataset tested through a disposable initialization runner; explicit test view definers used |
 | Owner's historical installation | All 32 checks returned zero issues on 7 October 2026 | Owner-provided output from Windows MySQL 26.7; tables viewed in DbGate |
-| Earlier V2 operations | 45 recorded checks in the earlier validation report | Separate operational component; not evidence of historical GL integration |
 
 Checks establish the tested arithmetic and structural conditions. They do not establish that every modelling assumption is economically correct or legally compliant.
 
@@ -257,20 +250,20 @@ See [historical validation](historical_2025/VALIDATION.md), [SQL check results](
 
 ## Getting started
 
-For a reviewer, begin with this README and the [historical analysis](historical_2025/BANK_ANALYSIS_2025.md). Some older linked documents may still use a generic bank label; **Alov Bank** is the current project name. Their earlier baseline results should not be mixed with this scenario's results.
+For a reviewer, begin with this README, the three charts above and the [bank analysis](historical_2025/BANK_ANALYSIS_2025.md).
 
-For installation, download this repository using **Code → Download ZIP** and extract it, or clone it. The generated historical import is not committed; first run `py historical_2025/build.py` from the extracted repository root (Python 3.10+; macOS/Linux: `python3 historical_2025/build.py`). Wait for the completion summary. This creates `historical_2025/05_historical_2025.sql` using the included synthetic seed. Allow several GB of free disk space. The historical import creates **`banking_portfolio_2025`** and requires an unused database name. Run it only once in a disposable learning environment; do not import it over a live database or add `--force` to bypass errors.
+For installation, download the repository using **Code → Download ZIP**, extract it, then follow [data/README.md](data/README.md) to reconstruct and extract the ready-made final SQL archive. You do not need to regenerate the scenario first. The import creates **`banking_portfolio_2025`** and requires an unused database name. Run it only once in a disposable learning environment; do not add `--force` to bypass errors.
 
 From Windows **Command Prompt**, using the paths appropriate for your installation:
 
 ```bat
-"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_PROJECT_FOLDER\historical_2025\05_historical_2025.sql"
+"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_PROJECT_FOLDER\alov_bank_final_2025.sql"
 "C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_PROJECT_FOLDER\historical_2025\06_checks.sql"
 ```
 
 Enter the password when prompted; do not put it in the command. These are shell commands, not SQL statements to paste at `mysql>`. Confirm every `issues` count is zero before interpreting the reports. If an import fails, investigate the first error rather than repeatedly importing into a partially created schema.
 
-For the other components, follow [baseline setup](docs/SETUP.md). Some legacy restore scripts recreate tables and are not interchangeable with this historical import. Installing or replacing this README does not require reimporting any SQL.
+Follow [SETUP.md](docs/SETUP.md) for extraction and import instructions.
 
 ### Explore the historical database
 
@@ -306,28 +299,23 @@ python historical_2025/build.py
 python historical_2025/test_scenario.py
 ```
 
-The historical generator uses the Python standard library and reads the compressed seed as data. It writes SQL and results; it does not connect to or update a database. The expanded 14.6-million-row account-activity generator is a separate script under `analysis/`.
+The generator uses the Python standard library and reads `historical_2025/source/source_seed.sql.gz` only as an internal generation input. This is not an alternative database release. It writes SQL and results without connecting to a database. Python generation code was developed with AI assistance.
 
-## Repository guide and file formats
+## Repository guide
 
-| Path / format | Purpose |
+| Location | Purpose |
 |---|---|
-| `README.md` | This GitHub front page, written in Markdown |
-| `historical_2025/build.py` | Historical scenario generator |
-| `historical_2025/05_historical_2025.sql` | Generated historical database import; distributed separately from normal Git history |
-| `historical_2025/06_checks.sql` | Read-only validation and reports |
-| `historical_2025/views.sql` | Report-view definitions used by the generator |
-| `historical_2025/results.json` | Generated metrics, counts and checksum |
-| `historical_2025/README.md` | Detailed historical methodology and installation guide |
-| `historical_2025/SOURCES.md` | Banking, tax and accounting research references |
-| `historical_2025/BANK_ANALYSIS_2025.md` | Detailed scenario analysis |
-| `data/portfolio_snapshot.sql.gz` | Compressed original seed |
-| `sql/` | Earlier V2 upgrades, baseline analysis and checks |
-| `analysis/`, `docs/`, `assets/`, `tests/` | Earlier generation scripts, baseline reports, charts and test records |
-
-**Markdown (`.md`) is the README format.** GitHub renders it as formatted text with tables, links and code blocks. Place this file in the repository root with the exact filename **`README.md`**. Excel (`.xlsx`) can be used for an optional separate dashboard or exported analysis, but is not the repository's README. SQL stores database definitions and import commands; CSV/TSV can carry exported tables; JSON stores machine-readable results; ZIP packages downloads.
-
-The original snapshot and expanded transaction-history database are published under [data/](data/README.md). The expanded archive uses verified binary parts and an automatic downloader. The separate historical lending scenario is generated locally with `historical_2025/build.py`; its SQL is excluded by `.gitignore`. No Release download is required for these workflows.
+| `data/` | Final database parts, checksum manifest and verified downloader |
+| `assets/` | Charts for the final scenario |
+| `historical_2025/build.py` | Reproducible final-scenario generator |
+| `historical_2025/06_checks.sql` | Read-only MySQL checks |
+| `historical_2025/results.json` | Final metrics and SQL checksum |
+| `historical_2025/README.md` | Model methodology and installation |
+| `historical_2025/SOURCES.md` | Sources and assumption boundaries |
+| `historical_2025/BANK_ANALYSIS_2025.md` | Financial and risk analysis |
+| `historical_2025/VALIDATION.md` | Recorded test evidence |
+| `historical_2025/source/` | Internal generator input; not a separate release |
+| `docs/SETUP.md` | Quick installation instructions |
 
 ## Sources and interpretation
 
@@ -352,12 +340,14 @@ International mortgage criteria are examples of assessment approaches, not inter
 3. Add collateral, product-specific affordability, business cash-flow assessment and simulated new originations.
 4. Develop documented credit-loss modelling and sensitivity tests for defaults, income shocks and recoveries.
 5. Replace inherited expense totals with detailed funding, payroll and supplier schedules; extend fixed-asset and tax coverage.
-6. Add authentic DbGate screenshots and dashboards without presenting baseline charts as current-scenario results.
+6. Add authentic DbGate screenshots and an interactive dashboard for this final scenario.
 
 ## Authorship, reuse and project status
 
 Prepared by **Nihat Şıxəliyev** as an educational finance and SQL portfolio. Code, data-generation workflows and documentation were developed with AI assistance. Model assumptions and validation boundaries are disclosed so reviewers can assess and reproduce the work.
 
-The historical scenario has been installed and checked by the project owner. The repository is being prepared for publication; no production deployment is implied. No open-source license has yet been selected. The educational-use statement explains the project's purpose and is not a substitute for a software license.
+The historical scenario has been installed and checked by the project owner. The final portfolio is publicly published; no production deployment is implied. No open-source license has yet been selected. The educational-use statement explains the project's purpose and is not a substitute for a software license.
 
 Suggested repository name: **`alov-bank-sql-portfolio`**.
+
+

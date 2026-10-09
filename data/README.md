@@ -1,13 +1,20 @@
-# Data and provenance
+# Final Alov Bank database
 
-`portfolio_snapshot.sql.gz` contains the original synthetic export supplied by the project owner. It is a lossless gzip of the original bytes, with 30,000 customers, 45,449 accounts and 363,592 transactions. The export was produced on 4 October 2026; its financial rows are labeled 2025.
+After repeated refinements, **banking_portfolio_2025** is the selected final database for this portfolio. The reporting cutoff is 31 December 2025. Its uncompressed SQL is 295,732,741 bytes; the verified gzip archive is 50,915,104 bytes and is published in five binary parts. Do not extract the parts individually.
 
-The original data-generation script was not supplied. The source rows, schema, procedures and export footer are the evidence available; exact generation formulas should not be claimed without qualification.
+## Download
 
-`analysis/generate_history.py` expands customer activity according to the owner's later requirement: an independent uniform integer from 1 through 80 for every customer-month in 2025, distributed across that customer's accounts. It preserves balances using clearly labeled synthetic closing-reconciliation entries and preserves the original one-per-account fee amounts. Non-fee amounts are sampled from a bounded lognormal distribution; withdrawals are capped to avoid negative balances. This is a reproducible scenario, not observed bank behavior.
+1. Download this repository with **Code → Download ZIP** and extract it.
+2. From the repository root run `py data/download_final.py --local` (Windows, Python 3.10+) or `python3 data/download_final.py --local` (macOS/Linux). This rejoins the included parts and verifies every SHA-256.
+3. Alternatively, download only [download_final.py](download_final.py) and [manifest.json](manifest.json) into one folder and run `py download_final.py`. It fetches the five parts automatically.
+4. Extract `alov_bank_final_2025.sql.gz` using 7-Zip. The SQL output is `alov_bank_final_2025.sql`. Import it following [SETUP.md](../docs/SETUP.md).
 
-The expanded restore selects `banking_portfolio_demo` and replaces tables there. Both synthetic databases are now published in this repository. Download the [snapshot](portfolio_snapshot.sql.gz) directly. The 143,913,163-byte expanded archive is stored losslessly in 14 parts under [expanded/](expanded/README.md); its downloader rejoins and verifies them. It can also be reproduced with the included generator.
+The downloader requires no third-party Python packages and preserves an existing output file. Use `--output` to choose another destination.
 
-All figures are AZN. Customer names are synthetic. Do not add real customer records, national IDs, passwords, connection files or private banking data to this public portfolio.
+Archive SHA-256: `f6b60d890ecb658a1eb090b9738b847255e4993219cf443e231021a15f9fd44f`
 
-Use `analysis/snapshot_metrics.json` for the seed and `analysis/expanded_metrics.json` for the expanded version. Financial totals are intentionally unchanged; transaction totals and coverage differ. Hashes and byte sizes identify the exact payloads.
+Uncompressed SQL SHA-256: `ff2e1ea47a7ad04056209e1b6ada4948997cf498e5076f74223234f4761e0770` (matches historical_2025/results.json).
+
+Superseded database downloads have been removed from the current branch. The small seed under `historical_2025/source/` is an internal generator dependency, not another database option.
+
+All customer records are synthetic. This is an educational model, not a production banking system.

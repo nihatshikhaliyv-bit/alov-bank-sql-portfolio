@@ -1,13 +1,9 @@
 # Changelog
 
-## Expanded-history portfolio package — 2026-10-05
+## Final portfolio consolidation — 9 October 2026
 
-- Added bank profile, finance/risk analysis, reproducible metrics, charts, dictionary and setup documentation.
-- Added deterministic 1–80 transactions per customer per month for 2025, preserving closing balances and fee totals.
-- Kept the untouched seed and the expanded scenario distinct.
-
-## V2 operations upgrade — 2026-10-05
-
-- Repaired transaction auto-generation and supported transaction types.
-- Added balanced GL posting, reconciliation, audit protection, approval workflow and named roles.
-- Recorded 45 test assertions on a restored seed copy, with limitations disclosed.
+- Selected banking_portfolio_2025 as the sole user-facing database.
+- Published the exact validated historical SQL as a verified five-part gzip download.
+- Replaced all three charts with final-scenario financial, credit-assessment and loan-trend visuals.
+- Removed superseded database downloads, operational scripts and baseline reports from the current branch.
+- Retained the internal generation seed for reproducibility and disclosed the model boundaries.

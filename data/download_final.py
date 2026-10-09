@@ -1,16 +1,16 @@
-"""Download or join Alov Bank's synthetic expanded database; verify SHA-256."""
+"""Download or join Alov Bank's synthetic final database; verify SHA-256."""
 import argparse
 import hashlib
 import json
 from pathlib import Path
 from urllib.request import urlopen
 
-BASE = "https://raw.githubusercontent.com/nihatshikhaliyv-bit/alov-bank-sql-portfolio/main/data/expanded/"
+BASE = "https://raw.githubusercontent.com/nihatshikhaliyv-bit/alov-bank-sql-portfolio/main/data/"
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--local", action="store_true", help="Join parts beside this script without downloading")
-    parser.add_argument("--output", type=Path, default=Path("bank_portfolio_expanded_2025.sql.gz"))
+    parser.add_argument("--output", type=Path, default=Path("alov_bank_final_2025.sql.gz"))
     args = parser.parse_args()
     folder = Path(__file__).resolve().parent
     manifest = json.loads((folder / "manifest.json").read_text())

@@ -1,6 +1,6 @@
 # Bank analysis — historical scenario at 31 December 2025
 
-This is a fictional Azerbaijani bank with 30,000 customers, 25 branches and 16,000 inherited loan contracts. Its name remains undecided. The scenario describes a retail-led lender that assesses both affordability and repayment history, offers selective restructuring, and separates cash collection from interest earned.
+This is a fictional Azerbaijani bank with 30,000 customers, 25 branches and 16,000 inherited loan contracts. Its name is **Alov Bank**. The scenario describes a retail-led lender that assesses both affordability and repayment history, offers selective restructuring, and separates cash collection from interest earned.
 
 ## Results
 
@@ -18,7 +18,7 @@ This is a fictional Azerbaijani bank with 30,000 customers, 25 branches and 16,0
 | Illustrative impairment expense | AZN 30,525,628.50 |
 | Rented / owned branches | 20 / 5 |
 
-The reconstructed outstanding balance is higher than the old snapshot. This is a **change of scenario estimate**, not evidence that the bank originated that difference in new loans. All 16,000 original contracts are replayed and original principal minus reconstructed principal payments equals the new outstanding amount.
+All 16,000 loan contracts are replayed: original principal minus reconstructed principal payments equals final outstanding principal.
 
 Taxable profit exceeds accounting profit largely because the illustrative impairment overlay is added back in the tax model. Consequently, current tax is more than 20% of accounting profit, although it remains 20% of positive model taxable profit. No deferred-tax benefit is recognised here. These results are not an audited statement or a complete IFRS financial report.
 
@@ -48,7 +48,7 @@ Eligibility is not approval, demand or loan origination. Customers without exist
 
 **The book is synthetic and inherited.** Old approvals were not made under the new rules. The model does not claim every existing borrower would qualify today. Behaviour proportions, income shocks, essential expenses, property prices and the allocation of old premises costs are chosen assumptions.
 
-**Collections are externally settled.** Loan payments are not deducted from the 14.6-million-row deposit-activity dataset. The two demonstrations therefore cannot be presented as one reconciled cash ledger. A unified cash and GL rebuild is a future project.
+**Collections are externally settled.** Loan payments are external settlements. Deposit-account debits are outside this database, so it cannot be presented as a consolidated cash ledger. A unified cash and GL rebuild is a future project.
 
 **Profit remains sensitive to assumptions.** Funding cost, fees and other expenses partly come from the original model. The 15% old-premises allocation and 1%/5%/50% loss overlay materially affect results. The loss overlay is not IFRS 9 ECL; no claim is made about regulatory provisioning, capital or liquidity.
 
@@ -65,3 +65,4 @@ Eligibility is not approval, demand or loan origination. Customers without exist
 5. Add sensitivity analysis for defaults, income shocks, funding costs and restructuring recoveries.
 
 For GitHub, present this report alongside the assumptions, source references, generator and validation record. The project's strongest claim is **transparent and reproducible financial modelling**, not production banking readiness.
+
