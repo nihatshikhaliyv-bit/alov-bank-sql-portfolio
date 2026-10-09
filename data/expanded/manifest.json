@@ -1,0 +1,77 @@
+{
+  "filename": "bank_portfolio_expanded_2025.sql.gz",
+  "size_bytes": 143913163,
+  "sha256": "e62827dcb6e040e609f5ae57a7bc5b4983b65530d55f96d5ed8f451a7b0f0ad2",
+  "parts": [
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part001",
+      "size_bytes": 10485760,
+      "sha256": "acdff832182f48ba337ce4b6ee8e6b21989bb3e53d70c7cd686e90ea216829da"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part002",
+      "size_bytes": 10485760,
+      "sha256": "21be0d37f62abdb568374ed0ed8fda15bc53ad27cb777f8dae2575e1b5f5d685"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part003",
+      "size_bytes": 10485760,
+      "sha256": "27fc22baf7355862496a4ee5dd0e39d41d3726e9ccd80830c9d61e9b77662afa"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part004",
+      "size_bytes": 10485760,
+      "sha256": "026daa761e15ba25319c430f320bf1492c77c05b3ce8bdbef8762cf7944a66df"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part005",
+      "size_bytes": 10485760,
+      "sha256": "4efb3a65162e49a2e36abb329ca9441f3155bac9b1d8cf29e5e19e2f37080c48"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part006",
+      "size_bytes": 10485760,
+      "sha256": "a858f5a09fddba230b4167ef5c0735bc4e1c15213073f2a8dc7b7f025414edf8"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part007",
+      "size_bytes": 10485760,
+      "sha256": "0af30778bdbe5ad4f60967782d307cd717a3f45945b4d273f5472d6b7d316204"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part008",
+      "size_bytes": 10485760,
+      "sha256": "fc947e8f4d5774fc4efe0afddd931d79d6c2f928ca9c4fa952df996345de294c"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part009",
+      "size_bytes": 10485760,
+      "sha256": "e9f6f13d07875ae0059cb751e876e7187accaaca6c9e28cb0d2266dac7e2273b"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part010",
+      "size_bytes": 10485760,
+      "sha256": "585ae7f10598f24ea946d706e232d39a51f8cb911465f0c9d9e7a3ff631d0b00"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part011",
+      "size_bytes": 10485760,
+      "sha256": "62cf1e3d64eed7f7581be72cd0ceb4c25e145eac03771bdda14bef9857a6a7cd"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part012",
+      "size_bytes": 10485760,
+      "sha256": "605b98eae6c383ce4d65e0ea20a50c7912a3efe46f6b752f22ad2eee6957f13d"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part013",
+      "size_bytes": 10485760,
+      "sha256": "9385f64b86c37dfacb111c6745a812521799eef56688838b8264bec881aa8f10"
+    },
+    {
+      "filename": "bank_portfolio_expanded_2025.sql.gz.part014",
+      "size_bytes": 7598283,
+      "sha256": "bdd3667368fc4b8ed3595fa596886277a7a4ae1dbee5e623cfdccf6bee448280"
+    }
+  ]
+}
