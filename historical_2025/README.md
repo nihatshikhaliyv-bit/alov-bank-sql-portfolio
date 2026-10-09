@@ -1,6 +1,6 @@
 # Historical bank scenario — 31 December 2025
 
-Prepared for Nihat Şıxəliyev. The bank name remains undecided.
+Prepared for Nihat Şıxəliyev. **Alov Bank** is a fictional educational project.
 
 This extension reconstructs all 16,000 original loans from their 2021–2024 issue dates through **31 December 2025 inclusive**, generates customer income histories, applies repayment-history lending limits, models 20 rented and 5 owned branches, and calculates an illustrative 2025 current-tax result. All new records are synthetic.
 
@@ -13,10 +13,10 @@ Why separate? The V2 repayment procedures use the current date, opening GL balan
 ### Windows installation
 
 1. Extract the ZIP to a normal folder, not inside the ZIP viewer.
-2. Open Command Prompt. Use this command, replacing the file path with the actual extracted SQL location:
+2. Open Command Prompt in the extracted repository root and run `py historical_2025/build.py` (Python 3.10+). Wait for the completion summary; this creates the SQL file. Then use this command, replacing the file path with the actual generated SQL location:
 
 ```bat
-"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_EXTRACTED_FOLDER\bank_portfolio_github\historical_2025\05_historical_2025.sql"
+"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_PROJECT_FOLDER\historical_2025\05_historical_2025.sql"
 ```
 
 Enter your MySQL password when prompted. This is a **Command Prompt command, not a command to paste at `mysql>`**. The database name must be unused. Do not add `--force`: batch mode should stop on the first SQL error. No `DROP DATABASE` or `DROP TABLE` is included. Do not rerun over a partial import; preserve the error and investigate it first.
@@ -24,7 +24,7 @@ Enter your MySQL password when prompted. This is a **Command Prompt command, not
 3. Run the checks, again from Command Prompt:
 
 ```bat
-"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_EXTRACTED_FOLDER\bank_portfolio_github\historical_2025\06_checks.sql"
+"C:\Program Files\MySQL\MySQL Server 26.7\bin\mysql.exe" -u root -p --default-character-set=utf8mb4 < "C:\YOUR_PROJECT_FOLDER\historical_2025\06_checks.sql"
 ```
 
 Every `issues` result must be zero. A printed completion message alone is not proof of success. Refresh DbGate's database list and select `banking_portfolio_2025` to inspect the new scenario.
@@ -121,7 +121,7 @@ python historical_2025/test_scenario.py
 
 Generation writes SQL, results and no database connections. The source compressed seed remains unchanged. Python 3.10+ standard library only. Run `06_checks.sql` after importing to MySQL 8.0+.
 
-For GitHub, commit the generator, source seed, documentation and validation results. The generated `05_historical_2025.sql` is larger than GitHub's regular per-file limit and is excluded by `.gitignore`; distribute the download ZIP as a Release asset instead of committing the SQL dump. No GitHub repository has been published by this work.
+The generator, compressed source seed, documentation and validation results are published in this repository. The generated `05_historical_2025.sql` exceeds the regular per-file limit and is excluded by `.gitignore`. Before importing, run `py historical_2025/build.py` from the repository root (Python 3.10+; macOS/Linux: `python3 historical_2025/build.py`). Wait for completion. It creates the historical SQL locally; no Release download is needed.
 
 ## Future work
 

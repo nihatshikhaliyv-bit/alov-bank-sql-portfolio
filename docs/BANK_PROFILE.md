@@ -1,8 +1,8 @@
-# BANK_NAME — Bank profile
+# Alov Bank — Bank profile
 
 ## Positioning
 
-BANK_NAME is a fictional Azerbaijani bank serving individuals and smaller business customers through a modeled network of 25 branches. Its core business is gathering customer deposits and providing mortgage, personal, vehicle, business and education loans. All balances are represented in AZN; the dataset does not implement foreign exchange.
+Alov Bank is a fictional Azerbaijani bank serving individuals and smaller business customers through a modeled network of 25 branches. Its core business is gathering customer deposits and providing mortgage, personal, vehicle, business and education loans. All balances are represented in AZN; the dataset does not implement foreign exchange.
 
 The most defensible description is **a retail-focused, mortgage-heavy bank with a substantial savings and salary-account base**. This positioning follows the product mix in the data. It is not a claim about a real bank, a banking license or market share.
 
@@ -38,7 +38,7 @@ Interest income is dominant. It closely matches annualized interest on Active lo
 
 The bank maintains a broad account base, a positive modeled contribution from every branch and a loan book funded below the total deposit balance. Account-level amounts reconcile to the branch summaries, and the upgrade makes future money movements traceable through both customer transactions and balanced accounting entries.
 
-These are strengths of the scenario and its implementation. No peer-bank benchmark has been supplied, so the project cannot establish that BANK_NAME outperforms the Azerbaijani banking market.
+These are strengths of the scenario and its implementation. No peer-bank benchmark has been supplied, so the project cannot establish that Alov Bank outperforms the Azerbaijani banking market.
 
 ## Where it needs development
 
@@ -48,4 +48,4 @@ Mortgage concentration, regional concentration and dependence on interest earnin
 
 > A synthetic Azerbaijani banking case study combining financial analysis with a MySQL operations model. It examines profitability, funding, credit concentration and branch performance, then connects new transactions to accounting, audit and approval controls.
 
-The name remains `BANK_NAME`. No founding year, headquarters address, ownership, market ranking, customer promise or regulatory status has been invented.
+The project is named **Alov Bank**. No founding year, headquarters address, ownership, market ranking, customer promise or regulatory status has been invented.

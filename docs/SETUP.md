@@ -14,7 +14,7 @@ The two database names intentionally separate your existing work from the expand
 
 ## Restore the expanded dataset
 
-1. Keep your current backup. The restore file contains DROP TABLE statements **inside banking_portfolio_demo**, so use an empty demo schema or fresh server. Restoring over an upgraded demo is unsupported because additional V2 foreign keys may exist.
+1. Obtain the archive using the [expanded database downloader](../data/expanded/README.md), then keep your current backup. The restore file contains DROP TABLE statements **inside banking_portfolio_demo**, so use an empty demo schema or fresh server. Restoring over an upgraded demo is unsupported because additional V2 foreign keys may exist.
 2. Extract the `.sql.gz` file using 7-Zip or `python analysis/extract_sql.py path/to/bank_portfolio_expanded_2025.sql.gz`. Allow several GB of free disk for the extracted SQL, indexes, database files and import logs.
 3. Use MySQL 8.0.16+ (8.4 recommended for reproduction). The earlier test used 8.4.11; the owner's 26.7/DbGate runtime has not been independently tested.
 4. Prefer the MySQL command-line client for this multi-million-row restore. From Windows **Command Prompt**, in the directory containing the extracted file:

@@ -259,7 +259,7 @@ See [historical validation](historical_2025/VALIDATION.md), [SQL check results](
 
 For a reviewer, begin with this README and the [historical analysis](historical_2025/BANK_ANALYSIS_2025.md). Some older linked documents may still use a generic bank label; **Alov Bank** is the current project name. Their earlier baseline results should not be mixed with this scenario's results.
 
-For installation, obtain the project package and extract it. The historical import creates **`banking_portfolio_2025`** and requires an unused database name. Run it only once in a disposable learning environment; do not import it over a live database or add `--force` to bypass errors.
+For installation, download this repository using **Code → Download ZIP** and extract it, or clone it. The generated historical import is not committed; first run `py historical_2025/build.py` from the extracted repository root (Python 3.10+; macOS/Linux: `python3 historical_2025/build.py`). Wait for the completion summary. This creates `historical_2025/05_historical_2025.sql` using the included synthetic seed. Allow several GB of free disk space. The historical import creates **`banking_portfolio_2025`** and requires an unused database name. Run it only once in a disposable learning environment; do not import it over a live database or add `--force` to bypass errors.
 
 From Windows **Command Prompt**, using the paths appropriate for your installation:
 
@@ -327,7 +327,7 @@ The historical generator uses the Python standard library and reads the compress
 
 **Markdown (`.md`) is the README format.** GitHub renders it as formatted text with tables, links and code blocks. Place this file in the repository root with the exact filename **`README.md`**. Excel (`.xlsx`) can be used for an optional separate dashboard or exported analysis, but is not the repository's README. SQL stores database definitions and import commands; CSV/TSV can carry exported tables; JSON stores machine-readable results; ZIP packages downloads.
 
-Generated SQL dumps should be distributed as Release downloads rather than committed as ordinary source files. The historical dump is already covered by the project's `.gitignore`. A public Release URL has not yet been assigned; add the real link once the repository and release exist.
+The original snapshot and expanded transaction-history database are published under [data/](data/README.md). The expanded archive uses verified binary parts and an automatic downloader. The separate historical lending scenario is generated locally with `historical_2025/build.py`; its SQL is excluded by `.gitignore`. No Release download is required for these workflows.
 
 ## Sources and interpretation
 
@@ -361,4 +361,3 @@ Prepared by **Nihat Şıxəliyev** as an educational finance and SQL portfolio. 
 The historical scenario has been installed and checked by the project owner. The repository is being prepared for publication; no production deployment is implied. No open-source license has yet been selected. The educational-use statement explains the project's purpose and is not a substitute for a software license.
 
 Suggested repository name: **`alov-bank-sql-portfolio`**.
-

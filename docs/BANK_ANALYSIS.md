@@ -1,11 +1,11 @@
-# BANK_NAME — Financial and operating assessment
+# Alov Bank — Financial and operating assessment
 
 **Prepared: 5 October 2026. Source: the supplied synthetic export; financial rows labeled 2025.**
 The bank name is pending. Amounts are AZN unless indicated. Financial calculations use the exported snapshot. Activity statistics use the expanded 2025 scenario; this is not an assumed post-upgrade operational state.
 
 ## Assessment
 
-BANK_NAME is a profitable retail-banking simulation with a substantial deposit base and a mortgage-led loan book. The strongest evidence is the combination of positive modeled profit across all branches and internally consistent customer balances. The main business weaknesses are concentration in mortgages, interest earnings and one regional grouping. The expanded activity is random but still synthetic: its uniform count rule and deliberate balance-reconciliation entries cannot support empirical claims about customer growth, seasonality or collections.
+Alov Bank is a profitable retail-banking simulation with a substantial deposit base and a mortgage-led loan book. The strongest evidence is the combination of positive modeled profit across all branches and internally consistent customer balances. The main business weaknesses are concentration in mortgages, interest earnings and one regional grouping. The expanded activity is random but still synthetic: its uniform count rule and deliberate balance-reconciliation entries cannot support empirical claims about customer growth, seasonality or collections.
 
 The appropriate conclusion is **a coherent financial scenario and an increasingly controlled operations prototype**. It is not evidence of the performance, safety or competitiveness of an actual bank.
 
