@@ -1,5 +1,7 @@
 # Install the final Alov Bank database
 
+You are permitted to import this synthetic dataset for education and personal practice; no separate approval is needed. See [PERMISSIONS.md](../PERMISSIONS.md).
+
 1. Download the repository ZIP and extract it to a normal folder.
 2. Follow [data/README.md](../data/README.md) to reconstruct `alov_bank_final_2025.sql.gz` with SHA-256 verification. Python 3.10+ is required only for the downloader; no extra packages are needed.
 3. Extract the archive with 7-Zip. It contains `alov_bank_final_2025.sql` (about 296 MB uncompressed).

@@ -18,3 +18,7 @@ Uncompressed SQL SHA-256: `ff2e1ea47a7ad04056209e1b6ada4948997cf498e5076f7422323
 Superseded database downloads have been removed from the current branch. The small seed under `historical_2025/source/` is an internal generator dependency, not another database option.
 
 All customer records are synthetic. This is an educational model, not a production banking system.
+
+## Permission to import
+
+You have permission to download, copy, import and analyse this synthetic dataset for educational purposes without contacting the author. You may also share your findings and charts with credit to Nihat Şıxəliyev. See [PERMISSIONS.md](../PERMISSIONS.md) for details.

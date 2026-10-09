@@ -346,7 +346,7 @@ International mortgage criteria are examples of assessment approaches, not inter
 
 Prepared by **Nihat Şıxəliyev** as an educational finance and SQL portfolio. Code, data-generation workflows and documentation were developed with AI assistance. Model assumptions and validation boundaries are disclosed so reviewers can assess and reproduce the work.
 
-The historical scenario has been installed and checked by the project owner. The final portfolio is publicly published; no production deployment is implied. No open-source license has yet been selected. The educational-use statement explains the project's purpose and is not a substitute for a software license.
+The historical scenario has been installed and checked by the project owner. The final portfolio is publicly published; no production deployment is implied. **You may download, import and analyse the synthetic data for educational purposes without requesting separate approval.** You may also run and adapt the accompanying scripts for learning. See [Educational-use permission](PERMISSIONS.md) for the scope, attribution and limitations. This is a specific permission grant; no unrestricted open-source license has been selected.
 
 Suggested repository name: **`alov-bank-sql-portfolio`**.
 
